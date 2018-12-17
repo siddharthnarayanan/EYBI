@@ -1,0 +1,2280 @@
+<!DOCTYPE HTML>
+<!--[if lte IE 9]><html class="no-js ie9 lower" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en-US"><!--<![endif]-->
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<head>
+
+<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>EY Business Intelligence</title>
+
+<style type="text/css">
+ .pie_dark {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            color:white;
+			left:20%;
+            background: #111;
+            background-image: linear-gradient(to right, transparent 50%, #ffe600 0);
+            }
+            .pie_dark:after,
+            .pie_dark:before {
+            content: '';
+            position: absolute;
+            display: block;
+            margin-left: 50%;
+            color:white;
+            width: 50%;
+            height: 100%;
+            border-radius: 0 100% 100% 0 / 50%;
+            background-color: inherit;
+            transform-origin: left;
+            }
+            .pie_dark:after {
+            background-color: #ffe600;
+            }
+            .pie_dark-val {
+            position: absolute;
+            top: 30px;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            color:white;
+            z-index: 2;
+            border-radius: 50%;
+            background-color: #111;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 140px;
+            }
+            .pie_dark[data-value="1"]:before {
+            transform: rotate(3.6deg);
+            }
+            .pie_dark[data-value="1"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="2"]:before {
+            transform: rotate(7.2deg);
+            }
+            .pie_dark[data-value="2"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="3"]:before {
+            transform: rotate(10.8deg);
+            }
+            .pie_dark[data-value="3"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="4"]:before {
+            transform: rotate(14.4deg);
+            }
+            .pie_dark[data-value="4"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="5"]:before {
+            transform: rotate(18deg);
+            }
+            .pie_dark[data-value="5"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="6"]:before {
+            transform: rotate(21.6deg);
+            }
+            .pie_dark[data-value="6"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="7"]:before {
+            transform: rotate(25.2deg);
+            }
+            .pie_dark[data-value="7"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="8"]:before {
+            transform: rotate(28.8deg);
+            }
+            .pie_dark[data-value="8"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="9"]:before {
+            transform: rotate(32.4deg);
+            }
+            .pie_dark[data-value="9"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="10"]:before {
+            transform: rotate(36deg);
+            }
+            .pie_dark[data-value="10"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="11"]:before {
+            transform: rotate(39.6deg);
+            }
+            .pie_dark[data-value="11"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="12"]:before {
+            transform: rotate(43.2deg);
+            }
+            .pie_dark[data-value="12"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="13"]:before {
+            transform: rotate(46.8deg);
+            }
+            .pie_dark[data-value="13"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="14"]:before {
+            transform: rotate(50.4deg);
+            }
+            .pie_dark[data-value="14"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="15"]:before {
+            transform: rotate(54deg);
+            }
+            .pie_dark[data-value="15"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="16"]:before {
+            transform: rotate(57.6deg);
+            }
+            .pie_dark[data-value="16"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="17"]:before {
+            transform: rotate(61.2deg);
+            }
+            .pie_dark[data-value="17"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="18"]:before {
+            transform: rotate(64.8deg);
+            }
+            .pie_dark[data-value="18"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="19"]:before {
+            transform: rotate(68.4deg);
+            }
+            .pie_dark[data-value="19"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="20"]:before {
+            transform: rotate(72deg);
+            }
+            .pie_dark[data-value="20"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="21"]:before {
+            transform: rotate(75.6deg);
+            }
+            .pie_dark[data-value="21"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="22"]:before {
+            transform: rotate(79.2deg);
+            }
+            .pie_dark[data-value="22"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="23"]:before {
+            transform: rotate(82.8deg);
+            }
+            .pie_dark[data-value="23"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="24"]:before {
+            transform: rotate(86.4deg);
+            }
+            .pie_dark[data-value="24"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="25"]:before {
+            transform: rotate(90deg);
+            }
+            .pie_dark[data-value="25"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="26"]:before {
+            transform: rotate(93.6deg);
+            }
+            .pie_dark[data-value="26"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="27"]:before {
+            transform: rotate(97.2deg);
+            }
+            .pie_dark[data-value="27"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="28"]:before {
+            transform: rotate(100.8deg);
+            }
+            .pie_dark[data-value="28"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="29"]:before {
+            transform: rotate(104.4deg);
+            }
+            .pie_dark[data-value="29"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="30"]:before {
+            transform: rotate(108deg);
+            }
+            .pie_dark[data-value="30"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="31"]:before {
+            transform: rotate(111.6deg);
+            }
+            .pie_dark[data-value="31"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="32"]:before {
+            transform: rotate(115.2deg);
+            }
+            .pie_dark[data-value="32"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="33"]:before {
+            transform: rotate(118.8deg);
+            }
+            .pie_dark[data-value="33"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="34"]:before {
+            transform: rotate(122.4deg);
+            }
+            .pie_dark[data-value="34"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="35"]:before {
+            transform: rotate(126deg);
+            }
+            .pie_dark[data-value="35"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="36"]:before {
+            transform: rotate(129.6deg);
+            }
+            .pie_dark[data-value="36"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="37"]:before {
+            transform: rotate(133.2deg);
+            }
+            .pie_dark[data-value="37"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="38"]:before {
+            transform: rotate(136.8deg);
+            }
+            .pie_dark[data-value="38"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="39"]:before {
+            transform: rotate(140.4deg);
+            }
+            .pie_dark[data-value="39"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="40"]:before {
+            transform: rotate(144deg);
+            }
+            .pie_dark[data-value="40"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="41"]:before {
+            transform: rotate(147.6deg);
+            }
+            .pie_dark[data-value="41"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="42"]:before {
+            transform: rotate(151.2deg);
+            }
+            .pie_dark[data-value="42"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="43"]:before {
+            transform: rotate(154.8deg);
+            }
+            .pie_dark[data-value="43"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="44"]:before {
+            transform: rotate(158.4deg);
+            }
+            .pie_dark[data-value="44"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="45"]:before {
+            transform: rotate(162deg);
+            }
+            .pie_dark[data-value="45"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="46"]:before {
+            transform: rotate(165.6deg);
+            }
+            .pie_dark[data-value="46"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="47"]:before {
+            transform: rotate(169.2deg);
+            }
+            .pie_dark[data-value="47"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="48"]:before {
+            transform: rotate(172.8deg);
+            }
+            .pie_dark[data-value="48"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="49"]:before {
+            transform: rotate(176.4deg);
+            }
+            .pie_dark[data-value="49"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="50"]:before {
+            transform: rotate(180deg);
+            }
+            .pie_dark[data-value="50"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="51"]:after {
+            transform: rotate(3.6deg);
+            }
+            .pie_dark[data-value="51"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="52"]:after {
+            transform: rotate(7.2deg);
+            }
+            .pie_dark[data-value="52"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="53"]:after {
+            transform: rotate(10.8deg);
+            }
+            .pie_dark[data-value="53"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="54"]:after {
+            transform: rotate(14.4deg);
+            }
+            .pie_dark[data-value="54"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="55"]:after {
+            transform: rotate(18deg);
+            }
+            .pie_dark[data-value="55"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="56"]:after {
+            transform: rotate(21.6deg);
+            }
+            .pie_dark[data-value="56"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="57"]:after {
+            transform: rotate(25.2deg);
+            }
+            .pie_dark[data-value="57"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="58"]:after {
+            transform: rotate(28.8deg);
+            }
+            .pie_dark[data-value="58"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="59"]:after {
+            transform: rotate(32.4deg);
+            }
+            .pie_dark[data-value="59"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="60"]:after {
+            transform: rotate(36deg);
+            }
+            .pie_dark[data-value="60"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="61"]:after {
+            transform: rotate(39.6deg);
+            }
+            .pie_dark[data-value="61"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="62"]:after {
+            transform: rotate(43.2deg);
+            }
+            .pie_dark[data-value="62"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="63"]:after {
+            transform: rotate(46.8deg);
+            }
+            .pie_dark[data-value="63"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="64"]:after {
+            transform: rotate(50.4deg);
+            }
+            .pie_dark[data-value="64"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="65"]:after {
+            transform: rotate(54deg);
+            }
+            .pie_dark[data-value="65"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="66"]:after {
+            transform: rotate(57.6deg);
+            }
+            .pie_dark[data-value="66"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="67"]:after {
+            transform: rotate(61.2deg);
+            }
+            .pie_dark[data-value="67"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="68"]:after {
+            transform: rotate(64.8deg);
+            }
+            .pie_dark[data-value="68"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="69"]:after {
+            transform: rotate(68.4deg);
+            }
+            .pie_dark[data-value="69"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="70"]:after {
+            transform: rotate(72deg);
+            }
+            .pie_dark[data-value="70"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="71"]:after {
+            transform: rotate(75.6deg);
+            }
+            .pie_dark[data-value="71"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="72"]:after {
+            transform: rotate(79.2deg);
+            }
+            .pie_dark[data-value="72"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="73"]:after {
+            transform: rotate(82.8deg);
+            }
+            .pie_dark[data-value="73"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="74"]:after {
+            transform: rotate(86.4deg);
+            }
+            .pie_dark[data-value="74"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="75"]:after {
+            transform: rotate(90deg);
+            }
+            .pie_dark[data-value="75"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="76"]:after {
+            transform: rotate(93.6deg);
+            }
+            .pie_dark[data-value="76"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="77"]:after {
+            transform: rotate(97.2deg);
+            }
+            .pie_dark[data-value="77"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="78"]:after {
+            transform: rotate(100.8deg);
+            }
+            .pie_dark[data-value="78"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="79"]:after {
+            transform: rotate(104.4deg);
+            }
+            .pie_dark[data-value="79"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="80"]:after {
+            transform: rotate(108deg);
+            }
+            .pie_dark[data-value="80"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="81"]:after {
+            transform: rotate(111.6deg);
+            }
+            .pie_dark[data-value="81"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="82"]:after {
+            transform: rotate(115.2deg);
+            }
+            .pie_dark[data-value="82"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="83"]:after {
+            transform: rotate(118.8deg);
+            }
+            .pie_dark[data-value="83"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="84"]:after {
+            transform: rotate(122.4deg);
+            }
+            .pie_dark[data-value="84"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="85"]:after {
+            transform: rotate(126deg);
+            }
+            .pie_dark[data-value="85"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="86"]:after {
+            transform: rotate(129.6deg);
+            }
+            .pie_dark[data-value="86"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="87"]:after {
+            transform: rotate(133.2deg);
+            }
+            .pie_dark[data-value="87"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="88"]:after {
+            transform: rotate(136.8deg);
+            }
+            .pie_dark[data-value="88"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="89"]:after {
+            transform: rotate(140.4deg);
+            }
+            .pie_dark[data-value="89"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="90"]:after {
+            transform: rotate(144deg);
+            }
+            .pie_dark[data-value="90"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="91"]:after {
+            transform: rotate(147.6deg);
+            }
+            .pie_dark[data-value="91"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="92"]:after {
+            transform: rotate(151.2deg);
+            }
+            .pie_dark[data-value="92"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="93"]:after {
+            transform: rotate(154.8deg);
+            }
+            .pie_dark[data-value="93"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="94"]:after {
+            transform: rotate(158.4deg);
+            }
+            .pie_dark[data-value="94"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="95"]:after {
+            transform: rotate(162deg);
+            }
+            .pie_dark[data-value="95"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="96"]:after {
+            transform: rotate(165.6deg);
+            }
+            .pie_dark[data-value="96"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="97"]:after {
+            transform: rotate(169.2deg);
+            }
+            .pie_dark[data-value="97"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="98"]:after {
+            transform: rotate(172.8deg);
+            }
+            .pie_dark[data-value="98"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="99"]:after {
+            transform: rotate(176.4deg);
+            }
+            .pie_dark[data-value="99"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="100"]:after {
+            transform: rotate(180deg);
+            }
+            .pie_dark[data-value="100"]:before {
+            display: none;
+            }
+
+
+* {
+  box-sizing: border-box;
+}
+/* width */
+.autocomplete-items::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+.autocomplete-items::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+.autocomplete-items::-webkit-scrollbar-thumb {
+    background: #777; 
+}
+
+/* Handle on hover */
+.autocomplete-items::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: #ffe600;
+  padding-left: 20px;
+  padding-right: 20px; 
+  color: #111;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 500px;
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9; 
+}
+
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+.container1{
+
+	//float:left;
+}
+
+.container1 > header {
+	margin: 0 auto;
+	padding: 1em;
+	text-align: center;
+}
+
+.container1 > header h1 {
+  font-weight: 600;
+	font-size: 3em;
+	margin: 0;
+}
+
+.wrapper1 {
+	line-height: 1.5em;
+	margin: 0 auto;
+	padding: 2em 1em 3em;
+	width: 100%;
+	max-width: 2000px;
+	//overflow: hidden;
+}
+
+table {
+    border-collapse: collapse;
+	
+    width: 100%;
+    background: #fff;
+}
+
+th {
+    background-color: #ffe600;
+    font-weight: bold;
+    color: #111;
+	border-color:#444;
+    white-space: nowrap;
+}
+
+td, th {
+    padding: 1em 1.5em;
+    text-align: left;
+}
+
+tbody th {
+	background-color: #2ea879;
+	border-color:#444;
+}
+tbody tr:nth-child(2n) {
+    background-color: #fff;
+    transition: all .125s ease-in-out;
+}
+tbody tr:nth-child(2n-1) {
+    background-color: #f5f5f5;
+    transition: all .125s ease-in-out;
+}
+tbody tr:hover {
+    background-color: rgba(255, 230, 0, 1); 
+}
+
+td.rank {
+	text-transform: capitalize;
+}
+
+
+.active22{
+background-color:#111; // example
+}
+.EYhover:hover
+{
+background:#444;
+}
+
+.chart1 div {
+  font: 10px sans-serif;
+  background-color: #ffe600;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+.chart2{
+  width: 100%;
+  min-height: 400px;
+    background:#111;
+}
+
+#donutchart,
+#chart {
+  width: 500px;
+  height: 500px;
+  font-family: Arial;
+}
+
+#donutchart {
+    position: relative;
+}
+
+#labelOverlay {
+    width: 90px;
+    height: 45px;
+    position: absolute;
+    top: 233px;
+    left: 205px;
+    text-align: center;
+    cursor: default;
+}
+
+#labelOverlay p {
+  line-height: 0.3;
+  padding:0;
+  margin: 8px;
+}
+
+#labelOverlay p.used-size {
+  line-height: 0.5;
+  font-size: 20pt;
+  color: #8e8e8e;
+}
+
+#labelOverlay p.total-size {
+  line-height: 0.5;
+  font-size: 12pt;
+  color: #cdcdcd;
+}
+
+.count {
+  font-family: Consolas, Menlo, Monaco, monospace;
+  font-family: 'ralewayregular';
+  font-weight: bold;
+  font-size: 5vh;
+  color:white;
+}
+.countdark {
+  font-family: Consolas, Menlo, Monaco, monospace;
+  font-family: 'ralewayregular';
+  font-weight: bold;
+  font-size: 5vh;
+  color:#111;
+}
+.buttonhover{
+background: #111;
+color: ffe600;
+ 
+}
+.buttonhover:hover{
+background:#333;
+color:#ffe600;}
+
+.dock_noleftpadding{
+padding-top: 10px !important; 
+padding-right: 10px !important; 
+padding-bottom: 10px !important;  
+}
+.dock_notoppadding{
+padding-left: 10px !important; 
+padding-right: 10px !important; 
+padding-bottom: 10px !important;  
+}
+
+.greyrow{
+background: #ffe600;
+padding-bottom: 5px !important;
+padding-top: 5px !important;
+font-size:11px;
+color: #111;
+}
+
+.supergreyrow{
+background: #94cad6;
+background: #fff;
+color:#111;
+padding-bottom: 5px !important;
+padding-top: 5px !important;
+font-size:11px;
+}
+
+</style>
+<link rel='stylesheet' id='EYBI_bootstrap.min.css-css'  href='../wp-content/themes/EYBI/css/bootstrap.min5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_overwrite-css'  href='../wp-content/themes/EYBI/css/overwrite5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_fonts_raleway-css'  href='../wp-content/themes/EYBI/fonts/raleway/stylesheet5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_font_awesome-css'  href='../wp-content/themes/EYBI/fonts/FontAwesome/font-awesome5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_owl_carousal-css'  href='../wp-content/themes/EYBI/css/owl/owl.carousel5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_owl_theme-css'  href='../wp-content/themes/EYBI/css/owl/owl.theme5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_owl_transitions-css'  href='../wp-content/themes/EYBI/css/owl/owl.transitions5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_animate-css'  href='../wp-content/themes/EYBI/css/animate5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_masonry-css'  href='../wp-content/themes/EYBI/css/masonry5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_jssor_slider-css'  href='../wp-content/themes/EYBI/css/jssor-slider5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_simplelightbox-css'  href='../wp-content/themes/EYBI/css/simplelightbox5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_style-css'  href='../wp-content/themes/EYBI/css/style5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_skins-css'  href='../wp-content/themes/EYBI/skins/default5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_theme-css'  href='../wp-content/themes/EYBI/css/theme5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_main_css-css'  href='../wp-content/themes/EYBI/style5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css'  href='../wp-content/plugins/js_composer/assets/css/js_composer.min8b06.css?ver=5.4.7' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+<link rel="icon" href="../wp-content/uploads/2018/04/EYBIicon.png" sizes="32x32" />
+<link rel="icon" href="../wp-content/uploads/2018/04/EYBIicon.png" sizes="192x192" />
+<script src="../inputdata/d3.v4.min.js"></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+<meta name="generator" content="WordPress 4.9.8" />
+<link rel="canonical" href="index.html" />
+
+
+ <script>
+    function goToURL() {
+      location.href = 'http://localhost:8000/Fallback_Language.html';
+
+    }
+  </script>
+
+<script> 
+    $(function(){
+      $("#includedContent").load("top_menu.html"); 
+    });
+    </script>
+<meta name="msapplication-TileImage" content="" />
+<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+</head>
+
+<body onLoad="myFunction()"  class="page-template-default page page-id-107 wpb-js-composer js-comp-ver-5.4.7 vc_responsive">
+
+
+<!-- Page Loader
+========================================================= -->
+ <!-- Start Loading -->
+ 
+    <div id="loading" class="wrap-loading">
+        <div class="loader">
+		
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </div>    
+ <!-- End Loading -->
+<!-- /End of Page loader
+========================================================= -->
+  
+    <!-- Start Layout -->
+    <div id="wrapper" class="wrapper">
+        
+        <!-- Start Wrap Sidebar -->
+        <div class="wrap-sidebar ">
+            
+            <!-- Start Logo -->
+            
+            <div class="logo">
+                <a href="http://localhost:8000/1eybi.html">
+                	<img src="../wp-content/uploads/2018/04/EYBI.png" alt="" style="transform: scale(1.3); width: 134px; height:auto; max-width:100%;" />
+					<!--<span style="color:white;"> Business </br> Intelligence</span>-->
+                </a>
+            </div>
+       
+            <nav class="wrap-menu"><ul id="menu-menu-1" class="menu"><li id="EYhover menu-item-213" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-213 "><a href="http://localhost:8000/Summary_KPI.html">Summary</a>
+<!-- <ul class="sub-menu">
+	<li id="menu-item-216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-216"><a href="http://.com/demo/wp/EYBI/">Home alt1</a></li>
+	<li id="menu-item-215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215"><a href="http://.com/demo/wp/EYBI/home-2/">Home alt2</a></li>
+</ul>-->
+</li>
+<li id="menu-item-102" class=" EYhover  menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-102 "><a href="http://localhost:8000/BIReporting2.html">BI Reporting</a>
+<!-- <ul class="sub-menu">
+	<li id="menu-item-217" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-107 current_page_item menu-item-217"><a href="index.html"> 3 Col</a></li>
+	<li id="menu-item-218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-218"><a href="http://.com/demo/wp/EYBI/-4-col/"> 4 Col</a></li>
+	<li id="menu-item-219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219"><a href="http://.com/demo/wp/EYBI/-space/"> Space</a></li>
+	<li id="menu-item-220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-220"><a href="http://.com/demo/wp/EYBI/-line/"> Line</a></li>
+	<li id="menu-item-221" class="menu-item menu-item-type-post_type menu-item-object- menu-item-221"><a href="http://.com/demo/wp/EYBI"> Detail</a></li>
+</ul>-->
+</li>
+<li id="menu-item-208" class=" EYhover active22 menu-item menu-item-type-post_type menu-item-object-page menu-item-208"><a href="http://localhost:8000/Fallback_Language.html">Fallback Language</a></li>
+
+</ul></nav>          	            <!-- Start Fixed Widget -->
+            
+			
+							
+							
+							
+							
+            <!-- End Fixed Widget -->
+                        <div class="clearsidebar"></div>
+            
+        </div>
+        <!-- End Wrap Sidebar -->
+        
+        <!-- Start Wrap Content -->
+        <div class="wrap-content">
+            
+            <!-- Start Mobile Nav -->
+            <div class="mobile-nav">
+                <a href="javascript:void(0)" class="nav" id="toggle-nav"><i class="fa fa-bars"></i></a>
+                <a href="http://localhost:8000/1eybi.html" class="logo">
+                	<img src="../wp-content/uploads/2018/04/EYBI.png" alt="" style="width: 134px; height:auto; max-width:100%;" />
+                </a>
+            </div>
+            <!-- End Mobile Nav -->
+            
+            <!-- Start Content -->
+            <div class="content">
+ 
+    				                    <!-- Start Post -->
+                                        
+                    
+						                                                <div class=""  style="">
+				<div class="wpb_column " style="" >
+		
+<!-- Start filter -->
+
+<!-- End filter -->
+
+
+<!-- Start Masonry -->
+<div class="row no-gap">
+    <div id="masonry" class="masonry infinite-scroll col-3">
+        <div class="grid-sizer col-md-4 col-sm-6 col-xs-12" ></div>
+		
+							  
+							 <a href="1eybi.html">
+                                 <div  data-filter="All" style=" width: 100%; background: #111;  min-height: 1px; vertical-align: middle; padding:10px;" class=" grid-item col-md-4 col-sm-6 col-xs-12 buttonhover">
+                                   
+								   
+									<a href="#"><div class="buttonhover" style="background:#111; padding:25px; float:left; min-height:50px; width:100%;" >
+                              
+							  <a href="syndicated_loan.html" style="text-decoration: none;">
+							<span style=" color: #ffe600; color:white; font-size: 5vh;">Syndicated Loans</span>
+							</a>
+							
+							
+							<div class="wrap-filter right" style="height: 30px; font-size:0.7em; background: #111; ">
+    <ul class="filters" style="border:none;">
+       
+	   
+                	
+                <li  data-filter="" style="">
+            	<a href="javascript:void(0)" onclick="goToURL();"  style="height: 30px">
+                	All              </a>
+            </li>
+			
+			
+                
+            </ul>
+</div>
+							  
+							  </div></a>
+                                 </div>
+                              </a>
+							  
+							  
+		
+							    
+                                 <div  data-filter="All"  style=" width: 100%; background: #111;  min-height: 50px; vertical-align: middle; " class="dock_notoppadding grid-item col-md-4 col-sm-6 col-xs-12 buttonhover">
+                                   
+								   
+		<div class="container1" >
+		<div class="wrapper1">
+		
+		<!--Make sure the form has the autocomplete function switched off:-->
+<form autocomplete="off" action="javascript:alert('Hello there, I am being submitted');">
+  <div class="autocomplete" style="width:100%;">
+    <input id="myInput" type="text" name="myCountry" placeholder="Organization name">
+  </div>
+<!--  <input type="submit" onclick="msg()">-->
+</form>
+
+		
+		</div>
+		</div>
+									
+                                 </div>
+		
+		 
+                              <a href="http://localhost:8000/Fallback_Language_Detail.html">
+                                 <div  style=" width: 100%; background: #111;  min-height: 70px; vertical-align: middle; " class="dock_notoppadding grid-item col-md-4 col-sm-6 col-xs-12 buttonhover">
+                                   
+								   
+									<a href="http://localhost:8000/Fallback_Language_Detail.html">
+									
+							  <div class="buttonhover" style="text-align: left; line-height: 15px; background:#222; vertical-align: middle; padding: 5px; padding-left: 10px; float:left; min-height:85px; width:100%;" >
+                              	
+							   <div class="buttonhover" style="text-align: left; line-height: 15px; background:#222; vertical-align: middle; padding: 5px; padding-left: 10px; float:left; min-height:50px; width:50%;" >
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Organization:</span>
+                              <span id="div1" style="color: #cbf442; line-height: 2px; font-size:0.7em; ">Wells Fargo</span>
+                              </br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Product:</span>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; ">Home Equity Line</span>	
+                              </div>
+							  
+							  <div class="buttonhover" style="text-align: left; line-height: 15px; background:#222; vertical-align: middle; padding: 5px; padding-left: 10px; float:right; min-height:50px; width:50%;" >
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;"></span>
+                              <span id="div1" style="color: #cbf442; line-height: 2px; font-size:0.7em; "></span>
+                              </br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;"></span>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; "></span>	
+                              </div>
+							  
+							  
+		<div class="container1" >
+		
+		
+			<div class="wrapper1" style="padding:0px;">
+				<table style="color: white;">
+					
+					<tbody>
+						<tr>
+                <td class="team greyrow" id="admin_agent_role1">Agreement Name</td>
+				<td class="rank greyrow" id="admin_agent_count1">Fallback Summary</td>
+				<td class="rank greyrow" id="admin_agent_fallback">Fallback Strength</td>
+                
+              </tr>
+					  <tr>
+                <td class="team supergreyrow" id="borrower_role">Prime Equity Line of Credit</td>
+				<td class="rank supergreyrow" id="borrower_count">Alternative IBOR </td>
+				<td class="rank supergreyrow" id="borrower_count1">Weak</td>
+              </tr>
+            	
+            	
+				
+					</tbody>
+				</table>
+			</div>
+		</div>
+							  
+							  
+                              </div>
+							  </a>
+                                 </div>
+                              </a>
+				
+	<a href="http://localhost:8000/Fallback_Language_Detail.html">
+                                 <div  style=" width: 100%; background: #111;  min-height: 70px; vertical-align: middle; " class="dock_notoppadding grid-item col-md-4 col-sm-6 col-xs-12 buttonhover">
+                                   
+								   
+									<a href="http://localhost:8000/Fallback_Language_Detail.html">
+									
+							  <div class="buttonhover" style="text-align: left; line-height: 15px; background:#222; vertical-align: middle; padding: 5px; padding-left: 10px; float:left; min-height:85px; width:100%;" >
+                              	
+							   <div class="buttonhover" style="text-align: left; line-height: 15px; background:#222; vertical-align: middle; padding: 5px; padding-left: 10px; float:left; min-height:50px; width:100%;" >
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Organization:</span>
+                              <span id="div1" style="color: #cbf442; line-height: 2px; font-size:0.7em; ">Wells Fargo</span>
+                              </br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Product:</span>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; ">ARM</span>	
+                              </div>
+							  
+							  
+		<div class="container1" >
+		
+		
+			<div class="wrapper1" style="padding:0px;">
+				<table style="color: white;">
+					
+					<tbody>
+						<tr>
+                <td class="team greyrow" id="admin_agent_role1">Agreement Name</td>
+				<td class="rank greyrow" id="admin_agent_count1">Fallback Summary</td>
+				<td class="rank greyrow" id="admin_agent_fallback">Fallback Strength</td>
+                
+              </tr>
+					  <tr>
+                <td class="team supergreyrow" id="borrower_role">Adjustable Rate Note - 6M LIBOR</td>
+				<td class="rank supergreyrow" id="borrower_count">Undefined Replacement Rate</td>
+				<td class="rank supergreyrow" id="borrower_count1">Medium</td>
+              </tr>
+            	
+            	
+				
+					</tbody>
+				</table>
+			</div>
+		</div>
+							  
+							  
+                              </div>
+							  </a>
+                                 </div>
+                              </a>
+				
+				<a href="http://localhost:8000/Fallback_Language_Detail.html">
+                                 <div  style=" width: 100%; background: #111;  min-height: 70px; vertical-align: middle; " class="dock_notoppadding grid-item col-md-4 col-sm-6 col-xs-12 buttonhover">
+                                   
+								   
+									<a href="http://localhost:8000/Fallback_Language_Detail.html">
+									
+							  <div class="buttonhover" style="text-align: left; line-height: 15px; background:#222; vertical-align: middle; padding: 5px; padding-left: 10px; float:left; min-height:85px; width:100%;" >
+                              	
+							   <div class="buttonhover" style="text-align: left; line-height: 15px; background:#222; vertical-align: middle; padding: 5px; padding-left: 10px; float:left; min-height:50px; width:100%;" >
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Organization:</span>
+                              <span id="div1" style="color: #cbf442; line-height: 2px; font-size:0.7em; ">Wells Fargo</span>
+                              </br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Product:</span>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; ">Home Equity Line</span>	
+                              </div>
+							  
+							  
+		<div class="container1" >
+		
+		
+			<div class="wrapper1" style="padding:0px;">
+				<table style="color: white;">
+					
+					<tbody>
+						<tr>
+                <td class="team greyrow" id="admin_agent_role1">Agreement Name</td>
+				<td class="rank greyrow" id="admin_agent_count1">Fallback Summary</td>
+				<td class="rank greyrow" id="admin_agent_fallback">Fallback Strength</td>
+                
+              </tr>
+					  <tr>
+                <td class="team supergreyrow" id="borrower_role">Business Line of Credit Agreement</td>
+				<td class="rank supergreyrow" id="borrower_count">Undefined Replacement Rate</td>
+				<td class="rank supergreyrow" id="borrower_count1">Medium</td>
+              </tr>
+            	
+            	
+				
+					</tbody>
+				</table>
+			</div>
+		</div>
+							  
+							  
+                              </div>
+							  </a>
+                                 </div>
+                              </a>
+				
+		
+		
+		<!--<div class="container1" >
+			<div class="wrapper1">
+				<table>
+					<thead>
+						<tr>
+							<th>Fallback Language</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+                <td class="rank" id="FallbackWeak">1</td>
+                <td class="team" id="FallbackWeakCount">Spain</td>
+              </tr>
+					  <tr>
+                <td class="rank" id="FallbackStrong">2</td>
+                <td class="team" id="FallbackStrongCount">Germany</td>
+              </tr>
+            
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
+		<div class="container1" >
+			<div class="wrapper1">
+				<table>
+					<thead>
+						<tr>
+							<th>Reference Rate Type</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+                <td class="team" id="admin_agent_role">Spain</td>
+				<td class="rank" id="admin_agent_count">1</td>
+                
+              </tr>
+					  <tr>
+                <td class="team" id="borrower_role">Spain</td>
+				<td class="rank" id="borrower_count">1</td>
+              </tr>
+            	<tr>
+                <td class="team" id="Lead Arranger">Spain</td>
+				<td class="rank" id="Lead Arranger Count">1</td>
+              </tr>
+            	<tr>
+                <td class="team" id="holdings_role">Spain</td>
+				<td class="rank" id="holdings_count">1</td>
+              </tr>
+            	
+				
+					</tbody>
+				</table>
+			</div>
+		</div>-->
+			  
+<script>
+
+d3.csv("BI_12032018.csv", function(data){
+	
+   var _temp;
+    console.log(data);
+	let my_org_list = ["A-B MERGER SUB I INC",
+"A-B MERGER SUB II LLC",
+"AFFINITY GAMING",
+"ALLIANCE HEALTHCARE SERVICES, INC",
+"ALLNEX (LUXEMBOURG)",
+"AMERICAN BATH GROUP",
+"AMERICAN BATH GROUP, LLC",
+"ANNTAYLOR RETAI L, INC",
+"ANTARES CAPITAL LP",
+"AP GAMING HOLDINGS",
+"AP GAMING I, LLC",
+"APEX TOOL GROUP, LLC",
+"APOLLO INVESTMENT CORPORATION",
+"ARGOS HOLDINGS INC",
+"ARGOS MERGER SUB INC",
+"ARROW MERGER CORP",
+"ASCENA RETAIL GROUP, INC.",
+"ASCEND LEARNING INTERMEDIATE HOLDINGS",
+"ASCEND LEARNING, LLC",
+"ASHCO, INC",
+"ASP ROYAL ACQUISITION FINANCING SUB CORP",
+"ASP ROYAL ACQUISITION MERGER SUB CORP",
+"AVSC HOLDING CORP",
+"BakerCorp International Holdings",
+"BakerCorp International, Inc.",
+"BALBOA INTERMEDIATE HOLDINGS LLC",
+"BANK OF AMERICA, N.A.",
+"BANK OF MONTREAL",
+"BARCLAYS BANK PLC",
+"BASS PRO GROUP, LLC",
+"BC MOUNTAIN HOLDINGS, INC",
+"BCPE INCR MERGER SUB , LLC",
+"BCPE INCR PURCHASER, INC",
+"BDF ACQUISITION CORP",
+"BDF INTERMEDIATE",
+"BEACON HOLDING INC",
+"BERLIN PACKAGING HOLDINGS",
+"BJ'S WHOLESALE CLUB",
+"BLACKBOARD HOLDINGS, INC",
+"BLACKBOARD INC",
+"BMO CAPITAL MARKETS CORP",
+"BOLT INFRASTRUCTURE",
+"BOLT INFRASTRUCTURE MERGER SUB, INC",
+"BROWN JORDAN ACQUISITION CO. INC.",
+"BROWN JORDAN INTERNATIONAL, INC.,",
+"BWAY INTERMEDIATE COMPANY, INC",
+"Camelot Finance LP",
+"Camelot UK Holdco Limited ",
+"Carestream Health Holdings, Inc.",
+"CBS RADIO INC",
+"CCO HOLDINGS, LLC",
+"CD&R WATERWORKS MERGER SUB, LLC",
+"CEDAR I HOLDING COMPANY, INC",
+"CEDAR I MERGER SUB, INC",
+"CENGAGE LEARNING, INC",
+"CenturyLink Escrow, LLC",
+"CHANGE HEALTHCARE HOLDINGS, LLC,",
+"CHANGE HEALTHCARE INTERMEDIATE HOLDINGS, LLC,",
+"CHARTER COMMUNICATIONS OPERATING",
+"CITGO PETROLEUM CORPORATION",
+"CITICORP NORTH AMERICA",
+"CITIGROUP GLOBAL MARKETS INC",
+"CITIZENS BANK, N.A",
+"Closure Systems International B.V.",
+"COLORADO BUYER INC",
+"COLOUROZ HOLDCO",
+"COLOUROZ INVESTMENT 1 GMBH",
+"COMMSCOPE HOLDING COMPANY, INC",
+"COMMSCOPE, INC",
+"COMMUNICATIONS SALES & LEASING, INC.",
+"COMPASS GROUP DIVERSIFIED HOLDINGS LLC",
+"CPI Buyer",
+"CPI Holdco,",
+"CPM HOLDINGS",
+"CREDIT SUISSE",
+"CREDIT SUISSE AG",
+"CREDIT SUISSE AG, CAYMAN ISLANDS BRANCH",
+"CREDIT SUISSE SECURITIES (USA) LLC",
+"CROSBY US ACQUISITION CORP.",
+"CROSBY WORLDWIDE LIMITED",
+"CROWN ACQUISITION CORP",
+"Cubs Acquisition Corporation",
+"CYPRESS INTERMEDIATE HOLDINGS II, INC",
+"DAWN INTERMEDIATE, INC",
+"DELAWARE LIMITED LIA BILITY COMPANY",
+"DELL INTERNATIONAL L.L.C",
+"DENALI INTERMEDIATE INC",
+"DEUTSCHE BANK AG",
+"Deutsche Bank AG New York Branch and Citizens Bank",
+"DEUTSCHE BANK SECURITIES INC.",
+"DJO FINANCE LLC",
+"DJO HOLDINGS LLC",
+"DMWSL 747 Limited",
+"Douglas Dynamics, Inc.",
+"DOUGLAS DYNAMICS, L.L.C",
+"DPR",
+"DPR, LLC",
+"DTI HOLDCO, INC",
+"DUBOIS CHEMICALS HOLDINGS, INC.",
+"DUBOIS CHEMICALS, INC",
+"DUKE FINANCE HOLDINGS",
+"DUKE FINANCE, LLC",
+"ENERGIZER SPINCO, INC",
+"ENTRAVISION COMMUNICATIONS CORPORATION",
+"EQUINOX HOLDINGS, INC.",
+"EVERGREEN SKILLS INTERMEDIATE LUX S.A R.L",
+"EVERGREEN SKILLS LUX S.A R.",
+"EXCELITAS TECHNOLOGI ES CORP. ",
+"EXCELITAS TECHNOLOGIES HOLDING CORP",
+"FGI HOLDING COMPANY",
+"FGI OPERATING COMPANY",
+"FIFTH THIRD BANK",
+"FIRST DATA CORPORATION",
+"FITNESS INTERNATIONAL, LLC",
+"Forterra Finance",
+"Forterra Inc.",
+"FRONTIER COMMUNICATIONS CORPORATION",
+"GARDEN ACQUISITION HOLDINGS, INC",
+"GARDEN MERGER SUB, LLC",
+"GE CAPITAL MARKETS, INC",
+"GLACIER FINCO LLC",
+"GLACIER II INC",
+"GLOBE INTERMEDIATE CORP",
+"GOBP HOLDINGS, INC",
+"GOLDMAN SACHS",
+"GOLDMAN SACHS INTERNATIONAL",
+"GOLDMAN SACHS LENDING PARTNERS LLC",
+"GRANITE INTERMEDIATE HOLDINGS, INC",
+"GREEKTOWN HOLDINGS, L.L.C",
+"GREENEDEN U.S. HOLDINGS",
+"GREENEDEN U.S. HOLDINGS II, LLC",
+"GRIFFEY INTERMEDIATE, INC",
+"GRIFFEY MIDCO (DE), LLC",
+"GXS GROUP, INC.",
+"GXS Holdings, Inc.",
+"HAWK GUARANTOR, LLC",
+"HOCKEY INTERMEDIATE INC",
+"Hockey Intermediate, Inc.",
+"HOFF MERGER SUB INC.",
+"HOFFMASTER HOLDINGS",
+"HOLDCO, INC",
+"Holdings, Southern Graphics Inc.",
+"Hub International Canada West ULC",
+"HUB INTERNATIONAL LIMITED",
+"HUSKY INJECTION MOLDING SYSTEMS LTD.",
+"HUSKY INTERMEDIATE INC",
+"INCEPTION PARENT",
+"INEOS STYROLUTION US HOLDING LLC",
+"INFILTRATOR WATER TECHNOLOGIES HOLDINGS",
+"INFILTRATOR WATER TECHNOLOGIES, LLC",
+"ING CAPITAL LLC",
+"INTERMEDIATE CORP",
+"INTERMEDIATE HOLDINGS LLC",
+"INTRAWEST RESORTS HOLDINGS, INC",
+"IVY ACQUISITION HOLDINGS INC",
+"IVY ACQUISITION SUB INC",
+"J.P MORGAN SECURITIES LLC",
+"JAZZ ACQUISITION",
+"JEFFERIES FINANCE LLC",
+"JPMORGAN CHASE BANK, N.A",
+"KKR CAPITAL MARKETS LLC",
+"Kraton Polymers LLC",
+"Kronos Acquisition Holdings Inc.",
+"KRONOS ACQUISITION INTERMEDIATE INC",
+"KRONOS WORLDWIDE, INC",
+"LA QUINTA HOLDINGS INC",
+"LA QUINTA INTERMEDIATE HOLDINGS L.L.C",
+"LANTHEUS HOLDINGS, INC",
+"LANTHEUS MEDICAL IMAGING",
+"LESLIE’S HOLDINGS, INC",
+"Leslie's Poolmart, Inc.",
+"LIBBEY GLASS INC",
+"LIBBEY INC.",
+"Logo Holdings II Corporation",
+"LSF9 PHAROAH HOLDINGS LLC",
+"LTF INTERMEDIATE HOLDINGS, INC",
+"LTF MERGER SUB",
+"MACQUARIE CAPITAL (USA) INC",
+"MANNINGTON MILLS, INC",
+"MARINE ACQUISITION CORP",
+"MARINE ACQUISITION HOLDINGS",
+"MCGRAW-HILL GLOBAL EDUCATION HOLDINGS",
+"MCGRAW-HILL GLOBAL EDUCATION INTERMEDIATE HOLDINGS",
+"MCJUNKIN RED MAN CORPORATION",
+"MERGERMARKET USA, INC",
+"MERRILL LYNCH",
+"MICHAELS FUNDING, INC",
+"MICHAELS STORES",
+"MICROSEMI CORPORATION",
+"MIDOCEAN PPL HOLDINGS CORP",
+"MIRION TECHNOLOGIES (FINANCE), LLC,",
+"MIRION TECHNOLOGIES (HOLDINGREP), LTD",
+"MONEYGRAM INTERNATIONAL, INC",
+"MORGAN STANLEY BANK INTERNATIONAL LIMITED",
+"MORGAN STANLEY SENIOR FUNDING, INC.",
+"MOTHERSHIP LLC",
+"NANNA MIDCO ",
+"NATIONAL VISION",
+"NATIXIS, NEW YORK BRANCH",
+"NAUTILUS ACQUISITION HOLDINGS, INC",
+"NAVICO, INC.",
+"NCEPTION MERGER SUB, INC",
+"NEFF HOLDINGS LLC",
+"NEFF RENTAL LLC",
+"NEON FINANCE COMPANY LLC",
+"NGS",
+"NN, INC",
+"NOMURA SECURITIES INTERNATIONAL, INC",
+"NPC INTERNATIONAL, INC",
+"NPC RESTAURANT HOLDINGS",
+"OCI Beaumont LLC",
+"OCI USA INC",
+"OHCP Wolfpack Borrower Sub",
+"OHCP WOLFPACK BORROWER SUB, LLC",
+"OMEGA ACQUISITION BIDCO LIMITED",
+"OMEGA US SUB, LLC",
+"ON Semiconductor Corporation",
+"Onex Carestream Finance LP",
+"OPE DTI INTERMEDIATE SUB INC",
+"OPE INMAR ACQUISITION, INC",
+"OPE INMAR HOLDINGS, INC",
+"Oxea Finance LLC",
+"P2 UPSTREAM CANADA BC ULC",
+"P2 Upstream Holdings Inc.",
+"PARENT, INC",
+"PEAK 10 HOLDING CORPORATION",
+"PEAK 10, INC.",
+"PHILADELPHIA ENERGY SOLUTIONS REFINING AND MARKETING LLC",
+"PIERCE, FENNER & SMITH INCORPORATED",
+"PIKE CORPORATION",
+"PLANET",
+"PLANET FITNESS HOLDINGS",
+"PLZ AEROSCIENCE CORPORATION",
+"PLZ ACQUISITION, INC",
+"Power Midco, LLC,",
+"PRE-PAID LEGAL SERVICES, INC",
+"PRESIDIO HOLDINGS INC",
+"PRESIDIO NETWORKED SOLUTIONS",
+"Presidio Networked Solutions LLC",
+"Project Homestake Merger Corp.",
+"PROJECT LEOPARD HOLDINGS, INC",
+"PROJECT LEOPARD INTERMEDIATECO LIMITED,",
+"PTS Buyer, Inc.",
+"Q MERGER SUB INC.",
+"QUAD/GRAPHICS, INC",
+"QUESO HOLDINGS INC",
+"QUEST SOFTWARE US HOLDINGS INC.",
+"QUIKRETE HOLDINGS, INC",
+"QUORUM HEALTH CORPORATION",
+"RACK HOLDINGS, INC",
+"RACK MERGER SUB INC.",
+"RBC CAPITAL",
+"RBC CAPITAL MARKETS",
+"REALOGY GROUP LLC",
+"REGIONS CAPITAL MARKETS",
+"RELATED EQUINOX INTERMEDIATE HOLDINGS CORP",
+"RENAISSANCE ACQUISITION CORP",
+"RENAISSANCE PARENT CORP",
+"RENFRO ACQUISITION INC",
+"RENFRO CORPORATION",
+"REVLON CONSUMER PRODUCTS CORPORATION",
+"REVLON, INC",
+"RIVERBED HOLDINGS",
+"ROAD INFRASTRUCTURE INVESTMENT HOLDINGS, INC",
+"ROCK ENTERTAINMENT, INC",
+"ROYAL BANK OF CANADA",
+"RPI FINANCE TRUST",
+"SERTA SIMMONS BEDDING, LLC",
+"SF CC INTERMEDIATE HOLDINGS, INC",
+"SIGNODE INDUSTRIAL GROUP HOLDINGS",
+"SIGNODE INDUSTRIAL GROUP HOLDINGS US INC",
+"SIGNODE INDUSTRIAL GROUP LUX S.A",
+"SIGNODE INDUSTRIAL GROUP US INC",
+"SOLENIS HOLDINGS 3 LLC",
+"SOLENIS INTERNATIONAL, L.P.",
+"SONNEBORN HOLDINGS L.P.",
+"SOUTHWIRE COMPANY, LLC",
+"Southwire Holding Company",
+"Southwire Operations and the Company",
+"Spin Holdco Inc.",
+"SRAM, LLC",
+"STANDARD CHARTERED BANK",
+"SUB LLC",
+"SUMITOMO MITSUI BANKING CORPORATION",
+"SUNTRUST",
+"SUNTRUST ROBINSON HUMPHREY, INC.",
+"Survey Monkey.com, LLC",
+"SWITCH, LTD",
+"SYNCHRONOSS TECHNOLOGIES,",
+"TATA CHEMICALS NORTH AMERICA INC",
+"TD SECURITIES (USA) LLC",
+"TEKNI-PLEX HOLDINGS",
+"TEKNI-PLEX, INC",
+"THE AES CORPORATION",
+"THE BANK OF NOVA SCOTIA",
+"the LLC Conversion",
+"the Luxembourg Companies Register",
+"TIBCO SOFTWARE INC",
+"TIERPOINT",
+"TRAFFIC SAFETY INTERMEDIATE LLC",
+"TRIANGLE PRIVATE HOLDINGS II, LLC,",
+"TRIANGLE PRIVATE MERGER SUB INC.,",
+"TRIBUNE COMPANY",
+"UBS SECURITIES LLC",
+"VIVA ALAMO INTERMEDIATE HOLDINGS LLC,",
+"VIVA ALAMO LLC",
+"WABASH NATIONAL CORPORATION",
+"WELLS FARGO SECURITIES",
+"WP CPP HOLDINGS, LLC",
+"Z CAPITAL AFFINITY OWNER, L.L.C.",
+"ZEKELMAN INDUSTRIES, INC",
+"ZIGGO SECURED FINANCE B.V"
+];
+	let my_org_set = new Set(my_org_list);
+	var variables = data.columns;
+	var admin_agent_count_flag=0;
+	var admin_agent_role_flag="Administrative Agent";
+  data.map(function(d) {
+    if (d['Extraction status']=='In Progress') {
+	admin_agent_count_flag++;
+        console.log( d['LegalEntitysRoles'] );
+		}
+	
+	document.getElementById("admin_agent_count").textContent=admin_agent_count_flag ;
+	document.getElementById("admin_agent_role").textContent=admin_agent_role_flag ;
+	
+  });
+  
+  var documents_flag=0;
+  var variables = data.columns;
+  variables.forEach(function(d) {
+  if (d == 'Extraction status') {
+		for (var i=0; i < 300; i += 1){
+
+				try{
+				
+				if(typeof(data[i])!="undefined"){
+					documents_flag++;
+					}
+				}
+			catch(e){
+					console.log('An error has occurred: '+e.message);
+				}	
+
+		}}
+
+  });
+  
+  
+  let legal_role_set = new Set();
+  let legal_entity_set = new Set();
+  let borrower_role_set = new Set();
+  let holdings_role_set = new Set();
+  let admin_role_set = new Set();
+  let borrower_role_set_current = new Set();
+  var borrower_role_list_current = [];
+  var admin_role_list = [];
+  var holdings_role_list = [];
+  var borrower_role_list = [];
+  var legal_role_list = [];
+   var legal_entity_list = [];
+  var ContractualMaturityDatePre2021 = [];
+  var ContractualMaturityDatePost2021 = [];
+  
+  var variables = data.columns;
+  variables.forEach(function(d) {
+    if (d == "LegalEntityies") {
+	
+		for (var i=0; i < documents_flag; i += 1){
+			
+			if (data[i]['Full File Name'].includes('CREDIT') || data[i]['Full File Name'].includes('Credit') || data[i]['Full File Name'].includes('credit')
+		|| data[i]['Full File Name'].includes('agreement') || data[i]['Full File Name'].includes('Agreement') || data[i]['Full File Name'].includes('AGREEMENT')
+		|| data[i]['Full File Name'].includes('resta') || data[i]['Full File Name'].includes('Resta') || data[i]['Full File Name'].includes('RESTA')) {
+			if(!data[i][d].includes('Unextracted')){
+				legal_entity_set.add(data[i][d]);
+				legal_entity_list.push(data[i][d]);
+				}
+			
+			}
+		}
+	}
+    if (d == "LegalEntitysRoles") {
+	
+		for (var i=0; i < documents_flag; i += 1){
+			
+			if (data[i]['Full File Name'].includes('CREDIT') || data[i]['Full File Name'].includes('Credit') || data[i]['Full File Name'].includes('credit')
+		|| data[i]['Full File Name'].includes('agreement') || data[i]['Full File Name'].includes('Agreement') || data[i]['Full File Name'].includes('AGREEMENT')
+		|| data[i]['Full File Name'].includes('resta') || data[i]['Full File Name'].includes('Resta') || data[i]['Full File Name'].includes('RESTA')) {
+			if(!data[i][d].includes('Unextracted')){
+				legal_role_set.add(data[i][d]);
+				legal_role_list.push(data[i][d]);
+				}
+			
+			}
+		}
+	}
+	document.getElementById("lead_arranger").textContent="Arranger" ;
+	document.getElementById("lead_arranger_count").textContent=legal_role_list.length ;
+	document.getElementById("lead_arranger_count").textContent=" " ;
+	if (d == "Borrower") {
+		for (var i=0; i < documents_flag; i += 1){
+
+			if (data[i]['Full File Name'].includes('CREDIT') || data[i]['Full File Name'].includes('Credit') || data[i]['Full File Name'].includes('credit')
+		|| data[i]['Full File Name'].includes('agreement') || data[i]['Full File Name'].includes('Agreement') || data[i]['Full File Name'].includes('AGREEMENT')
+		|| data[i]['Full File Name'].includes('resta') || data[i]['Full File Name'].includes('Resta') || data[i]['Full File Name'].includes('RESTA')) {
+			if(!data[i][d].includes('Unextracted')){
+				borrower_role_set.add(data[i][d]);
+				borrower_role_list.push(data[i][d]);
+				}
+			}
+		}
+	}
+	
+	document.getElementById("borrower_role").textContent="Borrower" ;
+	document.getElementById("borrower_count").textContent=borrower_role_list.length ;
+	document.getElementById("borrower_count").textContent=" " ;
+	if (d == "CalculationAdministrativeAgent") {
+		for (var i=0; i < documents_flag; i += 1){
+
+			if (data[i]['Full File Name'].includes('CREDIT') || data[i]['Full File Name'].includes('Credit') || data[i]['Full File Name'].includes('credit')
+		|| data[i]['Full File Name'].includes('agreement') || data[i]['Full File Name'].includes('Agreement') || data[i]['Full File Name'].includes('AGREEMENT')
+		|| data[i]['Full File Name'].includes('resta') || data[i]['Full File Name'].includes('Resta') || data[i]['Full File Name'].includes('RESTA')) {
+			if(!data[i][d].includes('Unextracted')){
+				admin_role_set.add(data[i][d]);
+				admin_role_list.push(data[i][d]);
+				}
+			}
+		}
+	}
+	
+	document.getElementById("admin_agent_role").textContent="CalculationAdministrativeAgent" ;
+	document.getElementById("admin_agent_count").textContent=admin_role_list.length ;
+	document.getElementById("admin_agent_count").textContent=" " ;
+	if (d == "Holdings") {
+		for (var i=0; i < documents_flag; i += 1){
+
+			if (data[i]['Full File Name'].includes('CREDIT') || data[i]['Full File Name'].includes('Credit') || data[i]['Full File Name'].includes('credit')
+		|| data[i]['Full File Name'].includes('agreement') || data[i]['Full File Name'].includes('Agreement') || data[i]['Full File Name'].includes('AGREEMENT')
+		|| data[i]['Full File Name'].includes('resta') || data[i]['Full File Name'].includes('Resta') || data[i]['Full File Name'].includes('RESTA')) {
+			if(!data[i][d].includes('Unextracted')){
+				holdings_role_set.add(data[i][d]);
+				holdings_role_list.push(data[i][d]);
+				}
+			}
+		}
+	}
+	
+	document.getElementById("holdings_role").textContent="Holdings" ;
+	document.getElementById("holdings_count").textContent=holdings_role_list.length ;
+	document.getElementById("holdings_count").textContent=" " ;
+	if (d == "ContractualMaturityDate") {
+		for (var i=0; i < documents_flag; i += 1){
+
+			if (data[i]['Full File Name'].includes('CREDIT') || data[i]['Full File Name'].includes('Credit') || data[i]['Full File Name'].includes('credit')
+		|| data[i]['Full File Name'].includes('agreement') || data[i]['Full File Name'].includes('Agreement') || data[i]['Full File Name'].includes('AGREEMENT')
+		|| data[i]['Full File Name'].includes('resta') || data[i]['Full File Name'].includes('Resta') || data[i]['Full File Name'].includes('RESTA')) {
+			if(!data[i][d].includes('Unextracted') ){
+				var mydate = new Date(data[i][d]);
+				if (mydate.getFullYear()<2021)
+					ContractualMaturityDatePre2021.push(mydate);
+				else
+					ContractualMaturityDatePost2021.push(mydate);
+				}
+			}
+		}
+	}
+	
+	document.getElementById("ContractualMaturityDatePre2021").textContent="Pre 2021" ;
+	document.getElementById("ContractualMaturityDatePre2021Count").textContent=ContractualMaturityDatePre2021.length ;
+	document.getElementById("ContractualMaturityDatePre2021Count").textContent=" " ;
+	document.getElementById("ContractualMaturityDatePost2021").textContent="Post 2021" ;
+	document.getElementById("ContractualMaturityDatePost2021Count").textContent=ContractualMaturityDatePost2021.length ;
+	document.getElementById("ContractualMaturityDatePost2021Count").textContent=" " ;
+  });
+  
+  holdings_role_set.forEach((el) => {
+  console.log(el);
+});
+  
+  function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+			  
+			  <!-----   -->
+			  _temp=inp.value;
+			  console.log(_temp);
+			  var current_borrower_count=0;
+			  var current_lender_count=0;
+			  var current_documentation_agent_count=0;
+			  var current_syndication_agent_count=0;
+			  var current_lead_arranger_count=0;
+			  var current_book_runner_count=0;
+			  var current_holdings_count=0;
+			  var current_admin_agent_count=0;
+			  var current_pre_2021_count=0;
+			  var current_post_2021_count=0;
+	
+		for (var i=0; i < borrower_role_list.length;i += 1){
+			
+			if(borrower_role_list[i].includes(_temp)){
+				current_borrower_count++;
+				}
+			console.log(borrower_role_list[i]);
+			console.log(_temp);
+			
+		}
+		document.getElementById("borrower_count").textContent=current_borrower_count;
+		for (var j=0; j<holdings_role_list.length;j += 1){
+			
+			if(holdings_role_list[j].includes(_temp)){
+				current_holdings_count++;
+				}
+			console.log(holdings_role_list[j]);
+			console.log(_temp);
+			
+		}
+		document.getElementById("holdings_count").textContent=current_holdings_count;
+		for (var k=0; k<admin_role_list.length;k += 1){
+			
+			if(admin_role_list[k].includes(_temp)){
+				current_admin_agent_count++;
+				}
+			console.log(admin_role_list[k]);
+			console.log(_temp);
+			
+		}
+		document.getElementById("admin_agent_count").textContent=current_admin_agent_count;
+		for (var k=0; k<legal_entity_list.length;k += 1){
+		
+			console.log(legal_entity_list[k]);
+			console.log(_temp.substring(0, 5));
+			
+			if(legal_entity_list[k].includes(_temp.substring(0, 13)) && data[k]['LegalEntitysRoles'].includes('Arranger')){
+				current_lead_arranger_count++;
+				
+				console.log(data[k]['LegalEntitysRoles'] + "  :  " + data[k]['Full File Name']);
+			console.log(_temp);
+				}
+			
+			
+		}
+		document.getElementById("lead_arranger_count").textContent=current_lead_arranger_count;
+		for (var k=0; k<legal_entity_list.length;k += 1){
+			
+			if(legal_entity_list[k].includes(_temp.substring(0, 13)) && data[i]['LegalEntitysRoles'].includes('Book Runner')){
+				current_book_runner_count++;
+				}
+			console.log(data[i]['LegalEntitysRoles']);
+			console.log(_temp);
+			
+		}
+		document.getElementById("book_runner_count").textContent=current_book_runner_count;
+		for (var k=0; k<legal_entity_list.length;k += 1){
+			
+			if(legal_entity_list[k].includes(_temp.substring(0, 13)) && data[i]['LegalEntitysRoles'].includes('Syndication Agent')){
+				current_syndication_agent_count++;
+				}
+			console.log(data[i]['LegalEntitysRoles']);
+			console.log(_temp);
+			
+		}
+		document.getElementById("syndication_agent_count").textContent=current_syndication_agent_count;
+		for (var k=0; k<legal_entity_list.length;k += 1){
+			
+			if(legal_entity_list[k].includes(_temp.substring(0, 13)) && data[i]['LegalEntitysRoles'].includes('Documentation Agent')){
+				current_documentation_agent_count++;
+				}
+			console.log(data[i]['LegalEntitysRoles']);
+			console.log(_temp);
+			
+		}
+		document.getElementById("documentation_agent_count").textContent=current_documentation_agent_count;
+		for (var i=0; i < documents_flag; i += 1){
+
+			if (data[i]['Full File Name'].includes('CREDIT') || data[i]['Full File Name'].includes('Credit') || data[i]['Full File Name'].includes('credit')
+		|| data[i]['Full File Name'].includes('agreement') || data[i]['Full File Name'].includes('Agreement') || data[i]['Full File Name'].includes('AGREEMENT')
+		|| data[i]['Full File Name'].includes('resta') || data[i]['Full File Name'].includes('Resta') || data[i]['Full File Name'].includes('RESTA')) {
+		
+		if (data[i]['Holdings'].includes(_temp))
+			{
+			var mydate = new Date(data[i]['ContractualMaturityDate']);
+			if(mydate.getFullYear()<2021)
+				current_pre_2021_count++;
+			if(mydate.getFullYear()>2021)
+				current_post_2021_count++;
+				
+		
+			
+			console.log(data[i]['ContractualMaturityDate']);
+			console.log(_temp);
+			}
+		 else if (data[i]['Borrower'].includes(_temp))
+			{
+			var mydate = new Date(data[i]['ContractualMaturityDate']);
+			if(mydate.getFullYear()<2021)
+				current_pre_2021_count++;
+			if(mydate.getFullYear()>2021)
+				current_post_2021_count++;
+				
+		
+			
+			console.log(data[i]['ContractualMaturityDate']);
+			console.log(_temp);
+			}
+		else if (data[i]['CalculationAdministrativeAgent'].includes(_temp))
+			{
+			var mydate = new Date(data[i]['ContractualMaturityDate']);
+			if(mydate.getFullYear()<2021)
+				current_pre_2021_count++;
+			if(mydate.getFullYear()>2021)
+				current_post_2021_count++;
+				
+		
+			
+			console.log(data[i]['ContractualMaturityDate']);
+			console.log(_temp);
+			}
+		else if(data[i]['LegalEntityies'].includes(_temp))
+			{
+			var mydate = new Date(data[i]['ContractualMaturityDate']);
+			if(mydate.getFullYear()<2021)
+				current_pre_2021_count++;
+			if(mydate.getFullYear()>2021)
+				current_post_2021_count++;
+				
+		
+			
+			console.log(data[i]['ContractualMaturityDate']);
+			console.log(_temp);
+			}	
+			}
+		}
+		document.getElementById("ContractualMaturityDatePre2021Count").textContent=current_pre_2021_count;
+		document.getElementById("ContractualMaturityDatePost2021Count").textContent=current_post_2021_count;
+		
+		  
+			  
+			  <!---- ---->
+			  
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+
+let set3 = new Set(function*() { yield* legal_entity_set; yield* admin_role_set; yield* holdings_role_set; yield* borrower_role_set; }());
+/*An array containing all the country names in the world:*/
+console.log(set3);
+let countries = Array.from(my_org_set);
+console.log(countries);
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), countries);
+  
+  function msg() {
+    alert("Hello world!");
+}
+  
+  
+});
+</script>
+
+				
+								
+									
+								</div>
+								
+								  
+  
+
+								
+								
+                                
+								
+                                
+            </div>
+</div>    
+<!-- End Masonry -->
+
+
+<!--<a id="next-page" href="load/json/3col/grid2.html">
+    <i class="fa fa-arrow-down"></i> Load more
+</a>-->
+
+
+	</div>
+
+			<div class="clearfix"></div>
+			</div>
+			
+
+                                        <!-- End Post -->
+                   
+                                       
+                                        <!-- End Form Comment -->
+                                        
+
+
+                </div>
+				<!-- Start Link Footer -->
+                <!--<footer class="footer">
+                    
+                    <ul class="link-footer">
+                                                    <li>
+                                    <a href="# "> 
+                                        About Us 
+                                    </a>
+                                </li>
+                                                    <li>
+                                    <a href="# "> 
+                                        Help Center 
+                                    </a>
+                                </li>
+                                                    <li>
+                                    <a href="# "> 
+                                        Privacy Policy 
+                                    </a>
+                                </li>
+                                                    <li>
+                                    <a href="# "> 
+                                        Term Conditions 
+                                    </a>
+                                </li>
+                                            
+                    </ul>
+                    <div class="copyright">
+                        2018 © Copyright <a href="https://.net/user/"></a>. All rights Reserved.
+                                    </div>
+                   
+                </footer>-->
+                 <!-- End Link Footer -->
+            </div>
+            
+        </div>
+    
+    <script type='text/javascript'>
+/* <![CDATA[ */
+var ajax_var = {"url":"http:\/\/www..com\/demo\/wp\/EYBI\/wp-admin\/admin-ajax.php","nonce":"6700a255d5"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+$('li a').click(function()
+{
+  $('li').removeClass('active22');
+  $(this).parent().addClass('active22');
+});
+</script>
+<script type='text/javascript'>
+
+var data = [4, 8, 15, 16, 23, 42];
+
+var x = d3.scale.linear()
+    .domain([0, d3.max(data)])
+    .range([0, 420]);
+
+d3.select(".chart1")
+  .selectAll("div")
+    .data(data)
+  .enter().append("div")
+    .style("width", function(d) { return x(d) + "px"; })
+    .text(function(d) { return d; });
+
+</script>
+<script type='text/javascript'>
+var chart = c3.generate({
+  bindto: d3.select('.chart2'),
+  data: {
+    columns: [
+      ['data1', 30, 200, 100, 400, 150, 250],
+      ['data2', 50, 20, 10, 40, 15, 25]
+    ]
+  }
+});
+</script>
+<script type='text/javascript'>
+// Using Google Charts
+// Label is overlayed HTML.
+// All parts are configurable.
+
+
+google.load("visualization", "1", {packages:["corechart"]});
+
+google.setOnLoadCallback(drawChart);
+
+function drawChart() {
+	var data = google.visualization.arrayToDataTable([
+		['Content', 'Size'],
+		['Photos',     22],
+		['Videos',      9],
+		['Free Space',  9]
+	]);
+
+	var options = {
+		title: "",
+		pieHole: 0.35,
+		backgroundColor: '#111',
+		pieSliceBorderColor: "none",
+     colors: ['#067ab5', '#3aa5dd', '#eaeaea' ],
+		legend: {
+			position: "none"	
+		},
+		pieSliceText: "none",
+		tooltip: {
+			trigger: "none"
+		}
+	};
+
+	var chart = new google.visualization
+			.PieChart(document.getElementById('chart'));
+        
+	chart.draw(data, options);
+  
+}
+</script>
+<script type='text/javascript'>
+$('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 8000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+</script>
+
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/post-like.min5152.js?ver=1.0'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/bootstrap.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/ie10-viewport-bug-workaround5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/jquery.easing-1.3.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/masonry/masonry-3.1.45010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/masonry/masonry.filter5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/infinitecroll/jquery.infinitescroll5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/nicescroll/jquery.nicescroll.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/hcsticky/jquery.hc-sticky.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/ticker/ticker5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/owl/owl.carousel.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/validation/jquery.validate.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/jssor-slider/jssor.slider.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/lightbox/simple-lightbox5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/prettymaps/prettymaps5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/EYBI.script5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-includes/js/wp-embed.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min8b06.js?ver=5.4.7'></script>
+    </body>
+
+
+</html>

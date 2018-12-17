@@ -1,0 +1,1435 @@
+<!DOCTYPE HTML>
+<!--[if lte IE 9]><html class="no-js ie9 lower" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en-US"><!--<![endif]-->
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<head>
+
+<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>EY Business Intelligence</title>
+
+<style type="text/css">
+ .pie_dark {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            color:white;
+			left:20%;
+            background: #111;
+            background-image: linear-gradient(to right, transparent 50%, #ffe600 0);
+            }
+            .pie_dark:after,
+            .pie_dark:before {
+            content: '';
+            position: absolute;
+            display: block;
+            margin-left: 50%;
+            color:white;
+            width: 50%;
+            height: 100%;
+            border-radius: 0 100% 100% 0 / 50%;
+            background-color: inherit;
+            transform-origin: left;
+            }
+            .pie_dark:after {
+            background-color: #ffe600;
+            }
+            .pie_dark-val {
+            position: absolute;
+            top: 30px;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            color:white;
+            z-index: 2;
+            border-radius: 50%;
+            background-color: #111;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 140px;
+            }
+            .pie_dark[data-value="1"]:before {
+            transform: rotate(3.6deg);
+            }
+            .pie_dark[data-value="1"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="2"]:before {
+            transform: rotate(7.2deg);
+            }
+            .pie_dark[data-value="2"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="3"]:before {
+            transform: rotate(10.8deg);
+            }
+            .pie_dark[data-value="3"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="4"]:before {
+            transform: rotate(14.4deg);
+            }
+            .pie_dark[data-value="4"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="5"]:before {
+            transform: rotate(18deg);
+            }
+            .pie_dark[data-value="5"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="6"]:before {
+            transform: rotate(21.6deg);
+            }
+            .pie_dark[data-value="6"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="7"]:before {
+            transform: rotate(25.2deg);
+            }
+            .pie_dark[data-value="7"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="8"]:before {
+            transform: rotate(28.8deg);
+            }
+            .pie_dark[data-value="8"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="9"]:before {
+            transform: rotate(32.4deg);
+            }
+            .pie_dark[data-value="9"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="10"]:before {
+            transform: rotate(36deg);
+            }
+            .pie_dark[data-value="10"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="11"]:before {
+            transform: rotate(39.6deg);
+            }
+            .pie_dark[data-value="11"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="12"]:before {
+            transform: rotate(43.2deg);
+            }
+            .pie_dark[data-value="12"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="13"]:before {
+            transform: rotate(46.8deg);
+            }
+            .pie_dark[data-value="13"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="14"]:before {
+            transform: rotate(50.4deg);
+            }
+            .pie_dark[data-value="14"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="15"]:before {
+            transform: rotate(54deg);
+            }
+            .pie_dark[data-value="15"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="16"]:before {
+            transform: rotate(57.6deg);
+            }
+            .pie_dark[data-value="16"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="17"]:before {
+            transform: rotate(61.2deg);
+            }
+            .pie_dark[data-value="17"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="18"]:before {
+            transform: rotate(64.8deg);
+            }
+            .pie_dark[data-value="18"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="19"]:before {
+            transform: rotate(68.4deg);
+            }
+            .pie_dark[data-value="19"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="20"]:before {
+            transform: rotate(72deg);
+            }
+            .pie_dark[data-value="20"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="21"]:before {
+            transform: rotate(75.6deg);
+            }
+            .pie_dark[data-value="21"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="22"]:before {
+            transform: rotate(79.2deg);
+            }
+            .pie_dark[data-value="22"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="23"]:before {
+            transform: rotate(82.8deg);
+            }
+            .pie_dark[data-value="23"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="24"]:before {
+            transform: rotate(86.4deg);
+            }
+            .pie_dark[data-value="24"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="25"]:before {
+            transform: rotate(90deg);
+            }
+            .pie_dark[data-value="25"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="26"]:before {
+            transform: rotate(93.6deg);
+            }
+            .pie_dark[data-value="26"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="27"]:before {
+            transform: rotate(97.2deg);
+            }
+            .pie_dark[data-value="27"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="28"]:before {
+            transform: rotate(100.8deg);
+            }
+            .pie_dark[data-value="28"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="29"]:before {
+            transform: rotate(104.4deg);
+            }
+            .pie_dark[data-value="29"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="30"]:before {
+            transform: rotate(108deg);
+            }
+            .pie_dark[data-value="30"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="31"]:before {
+            transform: rotate(111.6deg);
+            }
+            .pie_dark[data-value="31"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="32"]:before {
+            transform: rotate(115.2deg);
+            }
+            .pie_dark[data-value="32"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="33"]:before {
+            transform: rotate(118.8deg);
+            }
+            .pie_dark[data-value="33"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="34"]:before {
+            transform: rotate(122.4deg);
+            }
+            .pie_dark[data-value="34"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="35"]:before {
+            transform: rotate(126deg);
+            }
+            .pie_dark[data-value="35"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="36"]:before {
+            transform: rotate(129.6deg);
+            }
+            .pie_dark[data-value="36"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="37"]:before {
+            transform: rotate(133.2deg);
+            }
+            .pie_dark[data-value="37"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="38"]:before {
+            transform: rotate(136.8deg);
+            }
+            .pie_dark[data-value="38"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="39"]:before {
+            transform: rotate(140.4deg);
+            }
+            .pie_dark[data-value="39"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="40"]:before {
+            transform: rotate(144deg);
+            }
+            .pie_dark[data-value="40"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="41"]:before {
+            transform: rotate(147.6deg);
+            }
+            .pie_dark[data-value="41"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="42"]:before {
+            transform: rotate(151.2deg);
+            }
+            .pie_dark[data-value="42"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="43"]:before {
+            transform: rotate(154.8deg);
+            }
+            .pie_dark[data-value="43"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="44"]:before {
+            transform: rotate(158.4deg);
+            }
+            .pie_dark[data-value="44"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="45"]:before {
+            transform: rotate(162deg);
+            }
+            .pie_dark[data-value="45"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="46"]:before {
+            transform: rotate(165.6deg);
+            }
+            .pie_dark[data-value="46"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="47"]:before {
+            transform: rotate(169.2deg);
+            }
+            .pie_dark[data-value="47"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="48"]:before {
+            transform: rotate(172.8deg);
+            }
+            .pie_dark[data-value="48"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="49"]:before {
+            transform: rotate(176.4deg);
+            }
+            .pie_dark[data-value="49"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="50"]:before {
+            transform: rotate(180deg);
+            }
+            .pie_dark[data-value="50"]:after {
+            display: none;
+            }
+            .pie_dark[data-value="51"]:after {
+            transform: rotate(3.6deg);
+            }
+            .pie_dark[data-value="51"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="52"]:after {
+            transform: rotate(7.2deg);
+            }
+            .pie_dark[data-value="52"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="53"]:after {
+            transform: rotate(10.8deg);
+            }
+            .pie_dark[data-value="53"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="54"]:after {
+            transform: rotate(14.4deg);
+            }
+            .pie_dark[data-value="54"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="55"]:after {
+            transform: rotate(18deg);
+            }
+            .pie_dark[data-value="55"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="56"]:after {
+            transform: rotate(21.6deg);
+            }
+            .pie_dark[data-value="56"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="57"]:after {
+            transform: rotate(25.2deg);
+            }
+            .pie_dark[data-value="57"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="58"]:after {
+            transform: rotate(28.8deg);
+            }
+            .pie_dark[data-value="58"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="59"]:after {
+            transform: rotate(32.4deg);
+            }
+            .pie_dark[data-value="59"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="60"]:after {
+            transform: rotate(36deg);
+            }
+            .pie_dark[data-value="60"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="61"]:after {
+            transform: rotate(39.6deg);
+            }
+            .pie_dark[data-value="61"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="62"]:after {
+            transform: rotate(43.2deg);
+            }
+            .pie_dark[data-value="62"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="63"]:after {
+            transform: rotate(46.8deg);
+            }
+            .pie_dark[data-value="63"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="64"]:after {
+            transform: rotate(50.4deg);
+            }
+            .pie_dark[data-value="64"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="65"]:after {
+            transform: rotate(54deg);
+            }
+            .pie_dark[data-value="65"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="66"]:after {
+            transform: rotate(57.6deg);
+            }
+            .pie_dark[data-value="66"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="67"]:after {
+            transform: rotate(61.2deg);
+            }
+            .pie_dark[data-value="67"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="68"]:after {
+            transform: rotate(64.8deg);
+            }
+            .pie_dark[data-value="68"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="69"]:after {
+            transform: rotate(68.4deg);
+            }
+            .pie_dark[data-value="69"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="70"]:after {
+            transform: rotate(72deg);
+            }
+            .pie_dark[data-value="70"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="71"]:after {
+            transform: rotate(75.6deg);
+            }
+            .pie_dark[data-value="71"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="72"]:after {
+            transform: rotate(79.2deg);
+            }
+            .pie_dark[data-value="72"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="73"]:after {
+            transform: rotate(82.8deg);
+            }
+            .pie_dark[data-value="73"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="74"]:after {
+            transform: rotate(86.4deg);
+            }
+            .pie_dark[data-value="74"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="75"]:after {
+            transform: rotate(90deg);
+            }
+            .pie_dark[data-value="75"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="76"]:after {
+            transform: rotate(93.6deg);
+            }
+            .pie_dark[data-value="76"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="77"]:after {
+            transform: rotate(97.2deg);
+            }
+            .pie_dark[data-value="77"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="78"]:after {
+            transform: rotate(100.8deg);
+            }
+            .pie_dark[data-value="78"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="79"]:after {
+            transform: rotate(104.4deg);
+            }
+            .pie_dark[data-value="79"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="80"]:after {
+            transform: rotate(108deg);
+            }
+            .pie_dark[data-value="80"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="81"]:after {
+            transform: rotate(111.6deg);
+            }
+            .pie_dark[data-value="81"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="82"]:after {
+            transform: rotate(115.2deg);
+            }
+            .pie_dark[data-value="82"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="83"]:after {
+            transform: rotate(118.8deg);
+            }
+            .pie_dark[data-value="83"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="84"]:after {
+            transform: rotate(122.4deg);
+            }
+            .pie_dark[data-value="84"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="85"]:after {
+            transform: rotate(126deg);
+            }
+            .pie_dark[data-value="85"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="86"]:after {
+            transform: rotate(129.6deg);
+            }
+            .pie_dark[data-value="86"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="87"]:after {
+            transform: rotate(133.2deg);
+            }
+            .pie_dark[data-value="87"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="88"]:after {
+            transform: rotate(136.8deg);
+            }
+            .pie_dark[data-value="88"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="89"]:after {
+            transform: rotate(140.4deg);
+            }
+            .pie_dark[data-value="89"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="90"]:after {
+            transform: rotate(144deg);
+            }
+            .pie_dark[data-value="90"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="91"]:after {
+            transform: rotate(147.6deg);
+            }
+            .pie_dark[data-value="91"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="92"]:after {
+            transform: rotate(151.2deg);
+            }
+            .pie_dark[data-value="92"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="93"]:after {
+            transform: rotate(154.8deg);
+            }
+            .pie_dark[data-value="93"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="94"]:after {
+            transform: rotate(158.4deg);
+            }
+            .pie_dark[data-value="94"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="95"]:after {
+            transform: rotate(162deg);
+            }
+            .pie_dark[data-value="95"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="96"]:after {
+            transform: rotate(165.6deg);
+            }
+            .pie_dark[data-value="96"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="97"]:after {
+            transform: rotate(169.2deg);
+            }
+            .pie_dark[data-value="97"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="98"]:after {
+            transform: rotate(172.8deg);
+            }
+            .pie_dark[data-value="98"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="99"]:after {
+            transform: rotate(176.4deg);
+            }
+            .pie_dark[data-value="99"]:before {
+            display: none;
+            }
+            .pie_dark[data-value="100"]:after {
+            transform: rotate(180deg);
+            }
+            .pie_dark[data-value="100"]:before {
+            display: none;
+            }
+
+
+* {
+  box-sizing: border-box;
+}
+/* width */
+.autocomplete-items::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+.autocomplete-items::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+.autocomplete-items::-webkit-scrollbar-thumb {
+    background: #777; 
+}
+
+/* Handle on hover */
+.autocomplete-items::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: #ffe600;
+  padding-left: 20px;
+  padding-right: 20px; 
+  color: #111;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 500px;
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9; 
+}
+
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+.container1{
+
+	//float:left;
+}
+
+.container1 > header {
+	margin: 0 auto;
+	padding: 1em;
+	text-align: center;
+}
+
+.container1 > header h1 {
+  font-weight: 600;
+	font-size: 3em;
+	margin: 0;
+}
+
+.wrapper1 {
+	line-height: 1.5em;
+	margin: 0 auto;
+	padding: 2em 1em 3em;
+	width: 100%;
+	max-width: 2000px;
+	//overflow: hidden;
+}
+
+table {
+    border-collapse: collapse;
+	
+    width: 100%;
+    background: #fff;
+}
+
+th {
+    background-color: #ffe600;
+    font-weight: bold;
+    color: #111;
+	border-color:#444;
+    white-space: nowrap;
+}
+
+td, th {
+    padding: 1em 1.5em;
+    text-align: left;
+}
+
+tbody th {
+	background-color: #2ea879;
+	border-color:#444;
+}
+tbody tr:nth-child(2n) {
+    background-color: #fff;
+    transition: all .125s ease-in-out;
+}
+tbody tr:nth-child(2n-1) {
+    background-color: #f5f5f5;
+    transition: all .125s ease-in-out;
+}
+tbody tr:hover {
+    background-color: rgba(255, 230, 0, 1); 
+}
+
+td.rank {
+	text-transform: capitalize;
+}
+
+
+.active22{
+background-color:#111; // example
+}
+.EYhover:hover
+{
+background:#444;
+}
+
+.chart1 div {
+  font: 10px sans-serif;
+  background-color: #ffe600;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+.chart2{
+  width: 100%;
+  min-height: 400px;
+    background:#111;
+}
+
+#donutchart,
+#chart {
+  width: 500px;
+  height: 500px;
+  font-family: Arial;
+}
+
+#donutchart {
+    position: relative;
+}
+
+#labelOverlay {
+    width: 90px;
+    height: 45px;
+    position: absolute;
+    top: 233px;
+    left: 205px;
+    text-align: center;
+    cursor: default;
+}
+
+#labelOverlay p {
+  line-height: 0.3;
+  padding:0;
+  margin: 8px;
+}
+
+#labelOverlay p.used-size {
+  line-height: 0.5;
+  font-size: 20pt;
+  color: #8e8e8e;
+}
+
+#labelOverlay p.total-size {
+  line-height: 0.5;
+  font-size: 12pt;
+  color: #cdcdcd;
+}
+
+.count {
+  font-family: Consolas, Menlo, Monaco, monospace;
+  font-family: 'ralewayregular';
+  font-weight: bold;
+  font-size: 5vh;
+  color:white;
+}
+.countdark {
+  font-family: Consolas, Menlo, Monaco, monospace;
+  font-family: 'ralewayregular';
+  font-weight: bold;
+  font-size: 5vh;
+  color:#111;
+}
+.buttonhover{
+background: #111;
+color: ffe600;
+ 
+}
+.buttonhover:hover{
+background:#333;
+color:#ffe600;}
+
+.dock_noleftpadding{
+padding-top: 10px !important; 
+padding-right: 10px !important; 
+padding-bottom: 10px !important;  
+}
+.dock_notoppadding{
+padding-left: 10px !important; 
+padding-right: 10px !important; 
+padding-bottom: 10px !important;  
+}
+
+.progressbar{
+margin-bottom: 5px; 
+height:10px !important;
+}
+
+</style>
+<link rel='stylesheet' id='EYBI_bootstrap.min.css-css'  href='../wp-content/themes/EYBI/css/bootstrap.min5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_overwrite-css'  href='../wp-content/themes/EYBI/css/overwrite5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_fonts_raleway-css'  href='../wp-content/themes/EYBI/fonts/raleway/stylesheet5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_font_awesome-css'  href='../wp-content/themes/EYBI/fonts/FontAwesome/font-awesome5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_owl_carousal-css'  href='../wp-content/themes/EYBI/css/owl/owl.carousel5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_owl_theme-css'  href='../wp-content/themes/EYBI/css/owl/owl.theme5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_owl_transitions-css'  href='../wp-content/themes/EYBI/css/owl/owl.transitions5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_animate-css'  href='../wp-content/themes/EYBI/css/animate5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_masonry-css'  href='../wp-content/themes/EYBI/css/masonry5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_jssor_slider-css'  href='../wp-content/themes/EYBI/css/jssor-slider5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_simplelightbox-css'  href='../wp-content/themes/EYBI/css/simplelightbox5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_style-css'  href='../wp-content/themes/EYBI/css/style5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_skins-css'  href='../wp-content/themes/EYBI/skins/default5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_theme-css'  href='../wp-content/themes/EYBI/css/theme5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='EYBI_main_css-css'  href='../wp-content/themes/EYBI/style5010.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css'  href='../wp-content/plugins/js_composer/assets/css/js_composer.min8b06.css?ver=5.4.7' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+<link rel="icon" href="../wp-content/uploads/2018/04/EYBIicon.png" sizes="32x32" />
+<link rel="icon" href="../wp-content/uploads/2018/04/EYBIicon.png" sizes="192x192" />
+<script src="../inputdata/d3.v4.min.js"></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+<meta name="generator" content="WordPress 4.9.8" />
+<link rel="canonical" href="index.html" />
+
+
+ <script>
+    function goToURL() {
+      location.href = 'http://localhost:8000/BIReporting2.html';
+
+    }
+  </script>
+
+<script> 
+    $(function(){
+      $("#includedContent").load("top_menu.html"); 
+    });
+    </script>
+<meta name="msapplication-TileImage" content="" />
+<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+</head>
+
+<body onLoad="myFunction()"  class="page-template-default page page-id-107 wpb-js-composer js-comp-ver-5.4.7 vc_responsive">
+
+
+<!-- Page Loader
+========================================================= -->
+ <!-- Start Loading -->
+ 
+    <div id="loading" class="wrap-loading">
+        <div class="loader">
+		
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </div>    
+ <!-- End Loading -->
+<!-- /End of Page loader
+========================================================= -->
+  
+    <!-- Start Layout -->
+    <div id="wrapper" class="wrapper">
+        
+        <!-- Start Wrap Sidebar -->
+        <div class="wrap-sidebar ">
+            
+            <!-- Start Logo -->
+            
+            <div class="logo">
+                <a href="http://localhost:8000/1eybi.html">
+                	<img src="../wp-content/uploads/2018/04/EYBI.png" alt="" style="transform: scale(1.3); width: 134px; height:auto; max-width:100%;" />
+					<!--<span style="color:white;"> Business </br> Intelligence</span>-->
+                </a>
+            </div>
+       
+             <nav class="wrap-menu"><ul id="menu-menu-1" class="menu"><li id="EYhover menu-item-213" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-213 "><a href="http://localhost:8000/Summary_KPI.html">Summary</a>
+<!-- <ul class="sub-menu">
+	<li id="menu-item-216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-216"><a href="http://.com/demo/wp/EYBI/">Home alt1</a></li>
+	<li id="menu-item-215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215"><a href="http://.com/demo/wp/EYBI/home-2/">Home alt2</a></li>
+</ul>-->
+</li>
+<li id="menu-item-102" class=" EYhover  active22 menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-102 "><a href="http://localhost:8000/BIReporting.html">BI Reporting</a>
+<!-- <ul class="sub-menu">
+	<li id="menu-item-217" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-107 current_page_item menu-item-217"><a href="index.html"> 3 Col</a></li>
+	<li id="menu-item-218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-218"><a href="http://.com/demo/wp/EYBI/-4-col/"> 4 Col</a></li>
+	<li id="menu-item-219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219"><a href="http://.com/demo/wp/EYBI/-space/"> Space</a></li>
+	<li id="menu-item-220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-220"><a href="http://.com/demo/wp/EYBI/-line/"> Line</a></li>
+	<li id="menu-item-221" class="menu-item menu-item-type-post_type menu-item-object- menu-item-221"><a href="http://.com/demo/wp/EYBI"> Detail</a></li>
+</ul>-->
+</li>
+<li id="menu-item-208" class=" EYhover  menu-item menu-item-type-post_type menu-item-object-page menu-item-208"><a href="http://localhost:8000/Fallback_Language.html">Fallback Language</a></li>
+
+</ul></nav>          	            <!-- Start Fixed Widget -->
+            
+			
+							
+							
+							
+							
+            <!-- End Fixed Widget -->
+                        <div class="clearsidebar"></div>
+            
+        </div>
+        <!-- End Wrap Sidebar -->
+        
+        <!-- Start Wrap Content -->
+        <div class="wrap-content">
+            
+            <!-- Start Mobile Nav -->
+            <div class="mobile-nav">
+                <a href="javascript:void(0)" class="nav" id="toggle-nav"><i class="fa fa-bars"></i></a>
+                <a href="http://localhost:8000/1eybi.html" class="logo">
+                	<img src="../wp-content/uploads/2018/04/EYBI.png" alt="" style="width: 134px; height:auto; max-width:100%;" />
+                </a>
+            </div>
+            <!-- End Mobile Nav -->
+            
+            <!-- Start Content -->
+            <div class="content">
+ 
+    				                    <!-- Start Post -->
+                                        
+                    
+						                                                <div class=""  style="">
+				<div class="wpb_column " style="" >
+		
+<!-- Start filter -->
+
+<!-- End filter -->
+
+
+<!-- Start Masonry -->
+<div class="row no-gap">
+    <div id="masonry" class="masonry infinite-scroll col-3">
+        <div class="grid-sizer col-md-4 col-sm-6 col-xs-12" ></div>
+		
+							  
+							  <a href="1eybi.html">
+                                 <div  data-filter="All" style=" width: 100%; background: #111;  min-height: 1px; vertical-align: middle; padding:10px;" class=" grid-item col-md-4 col-sm-6 col-xs-12 buttonhover">
+                                   
+								   
+									<a href="#"><div class="buttonhover" style="background:#111; padding:25px; float:left; min-height:50px; width:100%;" >
+                              
+							  <a href="syndicated_loan.html" style="text-decoration: none;">
+							<span style=" color: #ffe600; color:white; font-size: 5vh;">Syndicated Loans </span>
+							</a>
+							
+							
+							<div class="wrap-filter right" style="height: 30px; font-size:0.7em; background: #111; ">
+    <ul class="filters" style="border:none;">
+       
+	   
+                	</li>
+                	<li  data-filter="" style="">
+            	<a href="javascript:void(0)" onclick="goToURL();" style="height: 30px; ">
+                	Organization                 </a>
+            </li>
+			<li  data-filter="Origination Date" style="">
+            	<a href="javascript:void(0)" style="height: 30px">
+                	Origination Date                </a>
+            </li>
+			<li data-filter="Reference Rate">
+            	<a href="javascript:void(0)" style="height: 30px">
+                	Reference Rate                </a>
+            </li>
+                	<li data-filter="Role Types">
+            	<a href="javascript:void(0)" style="height: 30px">
+                Role Types                </a>
+            </li>
+                	<li class="active " data-filter="Maturity Date">
+            	<a href="javascript:void(0)"style="height: 30px">
+                	Maturity Date                </a>
+            </li>
+                	<li  data-filter="Fallback" style="">
+            	<a href="javascript:void(0)" style="height: 30px; ">
+                	Fallback                 </a>
+            </li>
+		
+            </ul>
+</div>
+							  
+							  </div></a>
+                                 </div>
+                              </a>
+							  
+							  
+							   <!--    END    -->
+							   
+							   
+							    <!--    START    -->
+							  
+                              <!--    END    -->
+							  
+							  
+		
+		
+		<a href="syndicated_loan.html">
+                                 <div data-filter="Syndicated Loans" style="float:left; padding: 10px; min-height: 270px; " class="grid-item col-md-4 col-sm-6 col-xs-12 ">
+                           
+                              <a href="#"><div class="buttonhover" style="background:#111; float:left; min-height:50px; width:100%;" >
+                              <div class="count" style="padding-top:10px; text-align: center; padding-left:20px; padding-right:20px; "><span id="div1" style="color: #ffe600; font-size:0.7em; color:white;">Maturity Date</span></div></div></a>
+							  
+							  <div class="buttonhover" style="text-align: left; line-height: 15px; background:#111; vertical-align: middle; padding: 5px; padding-left: 10px; float:left; min-height:85px; width:100%;" >
+							  
+							   
+                              
+							  <div style="text-align:center; padding-top:30px;">
+							   
+                                    <div ng-app="myApp1" class="progress-wrapper met-chart" style="margin-left:30px;">
+                                       <div class="pie_dark" id="bla" data-value="67" >
+                                          <div id="field_extraction_percentage" class="pie_dark-val" ><div style="color:white; font-size:0.3em; margin-top:-40px;">67%</div></div>
+                                       </div>
+                                    </div>
+                                    <div class="met-text" style=" padding-top:50px;">
+                                       <span style=" color: #ffe600; color:white; font-size: 2vh; ">
+                                       Total fields extracted: <a href="#" id="total_fields_extracted_count">70</a> </br>
+                                       Total fields not extracted: <a href="#" id="fields_not_extracted_count"> 100</a> </br>
+                                       Total fields: <a href="#" id="total_fields">1</a> </br>
+                                       </span>
+                                    </div>
+							  </div>
+							  
+							  
+                              </div>
+							  
+                              </div>
+							  </a>
+							  
+							  <a href="syndicated_loan.html">
+                                 <div data-filter="Syndicated Loans" style=" min-height: 270px;" class="dock_noleftpadding grid-item col-md-4 col-sm-6 col-xs-12 ">
+                           
+                              <a href="#"><div class="buttonhover" style="background:#111; float:left; min-height:50px; width:100%;" >
+                              <div class="count" style="padding-top:10px; text-align: center; padding-left:20px; padding-right:20px; "><span id="div1" style="color: #ffe600; font-size:0.7em; color:white;">Reference Rate</span></div></div></a>
+
+
+							  <div class="buttonhover" style="text-align: left; line-height: 15px; background:#111; vertical-align: middle; padding: 5px; padding-left: 10px; float:left; min-height:85px; width:100%;" >
+                              
+							  <div style="text-align:center; padding-top:30px;">
+							   
+                                    <div ng-app="myApp1" class="progress-wrapper met-chart" style="margin-left:30px;">
+                                       <div class="pie_dark" id="bla" data-value="67" >
+                                          <div id="field_extraction_percentage" class="pie_dark-val" ><div style="color:white; font-size:0.3em; margin-top:-40px;">67%</div></div>
+                                       </div>
+                                    </div>
+                                    <div class="met-text" style=" padding-top:50px;">
+                                       <span style=" color: #ffe600; color:white; font-size: 2vh;">
+                                       Total fields extracted: <a href="#" id="total_fields_extracted_count">70</a> </br>
+                                       Total fields not extracted: <a href="#" id="fields_not_extracted_count"> 100</a> </br>
+                                       Total fields: <a href="#" id="total_fields">1</a> </br>
+                                       </span>
+                                    </div>
+							  </div>
+							  
+							  
+                              </div>
+							  
+                              </div>
+							  </a>
+							  
+							  <a href="syndicated_loan.html">
+                                 <div data-filter="Syndicated Loans" style="min-height: 270px; " class="dock_noleftpadding grid-item col-md-4 col-sm-6 col-xs-12 ">
+                           
+                               <a href="#"><div class="buttonhover" style="background:#111; float:left; min-height:50px; width:100%;" >
+                              <div class="count" style="padding-top:10px; text-align: center; padding-left:20px; padding-right:20px; "><span id="div1" style="color: #ffe600; font-size:0.7em; color:white;">Fallback Language Strength</span></div></div></a>
+							  
+							  
+							  <div class="buttonhover" style="text-align: left; line-height: 15px; background:#111; vertical-align: middle; padding: 5px; padding-left: 10px; float:left; min-height:85px; width:100%;" >
+                              
+							 <div style="text-align:center; ">
+							 
+                                   
+									<div id="chart" style="width: 200px; height: 120px; padding-top: 30px; transform:scale(0.5); margin-left:0px;"></div>
+									
+									<script>
+										var bardata = [100, 60, 55, 137, 79, 12,44,89,55,33,25,180,120,85];
+
+var height = 200,
+    width = 415,
+    barWidth = 25,
+    barOffset = 5;
+
+d3.select('#chart').append('svg')
+  .attr('width', width)
+  .attr('height', height)
+  .style('background', '#111')
+  .selectAll('rect').data(bardata)
+  .enter().append('rect')
+      .style('fill', '#ffe600')
+      .attr('width', barWidth)
+      .attr('height', function(d) {
+          return d;
+})
+
+ .attr('x', function(d,i) {
+          return i * (barWidth + barOffset);
+})
+  .attr('y', function(d) {
+          return height - d;
+  })
+
+
+
+									</script>
+  
+								   
+                                    <div class="met-text" style=" padding-top:50px;">
+                                       <span style=" color: #ffe600; color:white; font-size: 2vh;">
+                                       Total fields extracted: <a href="#" id="total_fields_extracted_count">70</a> </br>
+                                       Total fields not extracted: <a href="#" id="fields_not_extracted_count"> 100</a> </br>
+                                       Total fields: <a href="#" id="total_fields">1</a> </br>
+                                       </span>
+                                    </div>
+							 </div>
+							  
+							  
+                              </div>
+							  
+                              </div>
+							  </a>
+							  
+							  <a href="1eybi.html">
+                                 <div  style=" width: 100%; background: #111;  min-height: 50px; vertical-align: middle; " class="dock_notoppadding grid-item col-md-4 col-sm-6 col-xs-12 buttonhover">
+                                   
+								   
+									
+                                 </div>
+                              </a>
+					
+								
+									
+								</div>
+								
+								  
+  
+
+								
+								
+                                
+								
+                                
+            </div>
+</div>    
+<!-- End Masonry -->
+
+
+<!--<a id="next-page" href="load/json/3col/grid2.html">
+    <i class="fa fa-arrow-down"></i> Load more
+</a>-->
+
+
+	</div>
+
+			<div class="clearfix"></div>
+			</div>
+			
+
+                                        <!-- End Post -->
+                   
+                                       
+                                        <!-- End Form Comment -->
+                                        
+
+
+                </div>
+				<!-- Start Link Footer -->
+                <!--<footer class="footer">
+                    
+                    <ul class="link-footer">
+                                                    <li>
+                                    <a href="# "> 
+                                        About Us 
+                                    </a>
+                                </li>
+                                                    <li>
+                                    <a href="# "> 
+                                        Help Center 
+                                    </a>
+                                </li>
+                                                    <li>
+                                    <a href="# "> 
+                                        Privacy Policy 
+                                    </a>
+                                </li>
+                                                    <li>
+                                    <a href="# "> 
+                                        Term Conditions 
+                                    </a>
+                                </li>
+                                            
+                    </ul>
+                    <div class="copyright">
+                        2018 © Copyright <a href="https://.net/user/"></a>. All rights Reserved.
+                                    </div>
+                   
+                </footer>-->
+                 <!-- End Link Footer -->
+            </div>
+            
+        </div>
+    
+    <script type='text/javascript'>
+/* <![CDATA[ */
+var ajax_var = {"url":"http:\/\/www..com\/demo\/wp\/EYBI\/wp-admin\/admin-ajax.php","nonce":"6700a255d5"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+$('li a').click(function()
+{
+  $('li').removeClass('active22');
+  $(this).parent().addClass('active22');
+});
+</script>
+<script type='text/javascript'>
+
+var data = [4, 8, 15, 16, 23, 42];
+
+var x = d3.scale.linear()
+    .domain([0, d3.max(data)])
+    .range([0, 420]);
+
+d3.select(".chart1")
+  .selectAll("div")
+    .data(data)
+  .enter().append("div")
+    .style("width", function(d) { return x(d) + "px"; })
+    .text(function(d) { return d; });
+
+</script>
+<script type='text/javascript'>
+var chart = c3.generate({
+  bindto: d3.select('.chart2'),
+  data: {
+    columns: [
+      ['data1', 30, 200, 100, 400, 150, 250],
+      ['data2', 50, 20, 10, 40, 15, 25]
+    ]
+  }
+});
+</script>
+<script type='text/javascript'>
+// Using Google Charts
+// Label is overlayed HTML.
+// All parts are configurable.
+
+
+google.load("visualization", "1", {packages:["corechart"]});
+
+google.setOnLoadCallback(drawChart);
+
+function drawChart() {
+	var data = google.visualization.arrayToDataTable([
+		['Content', 'Size'],
+		['Photos',     22],
+		['Videos',      9],
+		['Free Space',  9]
+	]);
+
+	var options = {
+		title: "",
+		pieHole: 0.35,
+		backgroundColor: '#111',
+		pieSliceBorderColor: "none",
+     colors: ['#067ab5', '#3aa5dd', '#eaeaea' ],
+		legend: {
+			position: "none"	
+		},
+		pieSliceText: "none",
+		tooltip: {
+			trigger: "none"
+		}
+	};
+
+	var chart = new google.visualization
+			.PieChart(document.getElementById('chart'));
+        
+	chart.draw(data, options);
+  
+}
+</script>
+<script type='text/javascript'>
+$('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 8000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+</script>
+
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/post-like.min5152.js?ver=1.0'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/bootstrap.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/ie10-viewport-bug-workaround5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/jquery.easing-1.3.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/masonry/masonry-3.1.45010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/masonry/masonry.filter5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/infinitecroll/jquery.infinitescroll5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/nicescroll/jquery.nicescroll.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/hcsticky/jquery.hc-sticky.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/ticker/ticker5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/owl/owl.carousel.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/validation/jquery.validate.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/jssor-slider/jssor.slider.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/lightbox/simple-lightbox5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/prettymaps/prettymaps5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/themes/EYBI/js/EYBI.script5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-includes/js/comment-reply.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-includes/js/wp-embed.min5010.js?ver=4.9.8'></script>
+<script type='text/javascript' src='../wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min8b06.js?ver=5.4.7'></script>
+    </body>
+
+
+</html>

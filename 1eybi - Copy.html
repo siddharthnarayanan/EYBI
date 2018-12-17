@@ -1,0 +1,1279 @@
+<!DOCTYPE HTML>
+<!--[if lte IE 9]>
+<html class="no-js ie9 lower" lang="en">
+   <![endif]-->
+   <!--[if gt IE 9]><!-->
+   <html class="no-js" lang="en-US">
+      <!--<![endif]-->
+      <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+      <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>EY Business Intelligence</title>
+         <style type="text/css">
+            .pie {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            color:white;
+            background: #fff;
+            background-image: linear-gradient(to right, transparent 50%, #5eaf01 0);
+            }
+            .pie:after,
+            .pie:before {
+            content: '';
+            position: absolute;
+            display: block;
+            margin-left: 50%;
+            color:white;
+            width: 50%;
+            height: 100%;
+            border-radius: 0 100% 100% 0 / 50%;
+            background-color: inherit;
+            transform-origin: left;
+            }
+            .pie:after {
+            background-color: #5eaf01;
+            }
+            .pie-val {
+            position: absolute;
+            top: 30px;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            color:white;
+            z-index: 2;
+            border-radius: 50%;
+            background-color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 140px;
+            }
+            .pie[data-value="1"]:before {
+            transform: rotate(3.6deg);
+            }
+            .pie[data-value="1"]:after {
+            display: none;
+            }
+            .pie[data-value="2"]:before {
+            transform: rotate(7.2deg);
+            }
+            .pie[data-value="2"]:after {
+            display: none;
+            }
+            .pie[data-value="3"]:before {
+            transform: rotate(10.8deg);
+            }
+            .pie[data-value="3"]:after {
+            display: none;
+            }
+            .pie[data-value="4"]:before {
+            transform: rotate(14.4deg);
+            }
+            .pie[data-value="4"]:after {
+            display: none;
+            }
+            .pie[data-value="5"]:before {
+            transform: rotate(18deg);
+            }
+            .pie[data-value="5"]:after {
+            display: none;
+            }
+            .pie[data-value="6"]:before {
+            transform: rotate(21.6deg);
+            }
+            .pie[data-value="6"]:after {
+            display: none;
+            }
+            .pie[data-value="7"]:before {
+            transform: rotate(25.2deg);
+            }
+            .pie[data-value="7"]:after {
+            display: none;
+            }
+            .pie[data-value="8"]:before {
+            transform: rotate(28.8deg);
+            }
+            .pie[data-value="8"]:after {
+            display: none;
+            }
+            .pie[data-value="9"]:before {
+            transform: rotate(32.4deg);
+            }
+            .pie[data-value="9"]:after {
+            display: none;
+            }
+            .pie[data-value="10"]:before {
+            transform: rotate(36deg);
+            }
+            .pie[data-value="10"]:after {
+            display: none;
+            }
+            .pie[data-value="11"]:before {
+            transform: rotate(39.6deg);
+            }
+            .pie[data-value="11"]:after {
+            display: none;
+            }
+            .pie[data-value="12"]:before {
+            transform: rotate(43.2deg);
+            }
+            .pie[data-value="12"]:after {
+            display: none;
+            }
+            .pie[data-value="13"]:before {
+            transform: rotate(46.8deg);
+            }
+            .pie[data-value="13"]:after {
+            display: none;
+            }
+            .pie[data-value="14"]:before {
+            transform: rotate(50.4deg);
+            }
+            .pie[data-value="14"]:after {
+            display: none;
+            }
+            .pie[data-value="15"]:before {
+            transform: rotate(54deg);
+            }
+            .pie[data-value="15"]:after {
+            display: none;
+            }
+            .pie[data-value="16"]:before {
+            transform: rotate(57.6deg);
+            }
+            .pie[data-value="16"]:after {
+            display: none;
+            }
+            .pie[data-value="17"]:before {
+            transform: rotate(61.2deg);
+            }
+            .pie[data-value="17"]:after {
+            display: none;
+            }
+            .pie[data-value="18"]:before {
+            transform: rotate(64.8deg);
+            }
+            .pie[data-value="18"]:after {
+            display: none;
+            }
+            .pie[data-value="19"]:before {
+            transform: rotate(68.4deg);
+            }
+            .pie[data-value="19"]:after {
+            display: none;
+            }
+            .pie[data-value="20"]:before {
+            transform: rotate(72deg);
+            }
+            .pie[data-value="20"]:after {
+            display: none;
+            }
+            .pie[data-value="21"]:before {
+            transform: rotate(75.6deg);
+            }
+            .pie[data-value="21"]:after {
+            display: none;
+            }
+            .pie[data-value="22"]:before {
+            transform: rotate(79.2deg);
+            }
+            .pie[data-value="22"]:after {
+            display: none;
+            }
+            .pie[data-value="23"]:before {
+            transform: rotate(82.8deg);
+            }
+            .pie[data-value="23"]:after {
+            display: none;
+            }
+            .pie[data-value="24"]:before {
+            transform: rotate(86.4deg);
+            }
+            .pie[data-value="24"]:after {
+            display: none;
+            }
+            .pie[data-value="25"]:before {
+            transform: rotate(90deg);
+            }
+            .pie[data-value="25"]:after {
+            display: none;
+            }
+            .pie[data-value="26"]:before {
+            transform: rotate(93.6deg);
+            }
+            .pie[data-value="26"]:after {
+            display: none;
+            }
+            .pie[data-value="27"]:before {
+            transform: rotate(97.2deg);
+            }
+            .pie[data-value="27"]:after {
+            display: none;
+            }
+            .pie[data-value="28"]:before {
+            transform: rotate(100.8deg);
+            }
+            .pie[data-value="28"]:after {
+            display: none;
+            }
+            .pie[data-value="29"]:before {
+            transform: rotate(104.4deg);
+            }
+            .pie[data-value="29"]:after {
+            display: none;
+            }
+            .pie[data-value="30"]:before {
+            transform: rotate(108deg);
+            }
+            .pie[data-value="30"]:after {
+            display: none;
+            }
+            .pie[data-value="31"]:before {
+            transform: rotate(111.6deg);
+            }
+            .pie[data-value="31"]:after {
+            display: none;
+            }
+            .pie[data-value="32"]:before {
+            transform: rotate(115.2deg);
+            }
+            .pie[data-value="32"]:after {
+            display: none;
+            }
+            .pie[data-value="33"]:before {
+            transform: rotate(118.8deg);
+            }
+            .pie[data-value="33"]:after {
+            display: none;
+            }
+            .pie[data-value="34"]:before {
+            transform: rotate(122.4deg);
+            }
+            .pie[data-value="34"]:after {
+            display: none;
+            }
+            .pie[data-value="35"]:before {
+            transform: rotate(126deg);
+            }
+            .pie[data-value="35"]:after {
+            display: none;
+            }
+            .pie[data-value="36"]:before {
+            transform: rotate(129.6deg);
+            }
+            .pie[data-value="36"]:after {
+            display: none;
+            }
+            .pie[data-value="37"]:before {
+            transform: rotate(133.2deg);
+            }
+            .pie[data-value="37"]:after {
+            display: none;
+            }
+            .pie[data-value="38"]:before {
+            transform: rotate(136.8deg);
+            }
+            .pie[data-value="38"]:after {
+            display: none;
+            }
+            .pie[data-value="39"]:before {
+            transform: rotate(140.4deg);
+            }
+            .pie[data-value="39"]:after {
+            display: none;
+            }
+            .pie[data-value="40"]:before {
+            transform: rotate(144deg);
+            }
+            .pie[data-value="40"]:after {
+            display: none;
+            }
+            .pie[data-value="41"]:before {
+            transform: rotate(147.6deg);
+            }
+            .pie[data-value="41"]:after {
+            display: none;
+            }
+            .pie[data-value="42"]:before {
+            transform: rotate(151.2deg);
+            }
+            .pie[data-value="42"]:after {
+            display: none;
+            }
+            .pie[data-value="43"]:before {
+            transform: rotate(154.8deg);
+            }
+            .pie[data-value="43"]:after {
+            display: none;
+            }
+            .pie[data-value="44"]:before {
+            transform: rotate(158.4deg);
+            }
+            .pie[data-value="44"]:after {
+            display: none;
+            }
+            .pie[data-value="45"]:before {
+            transform: rotate(162deg);
+            }
+            .pie[data-value="45"]:after {
+            display: none;
+            }
+            .pie[data-value="46"]:before {
+            transform: rotate(165.6deg);
+            }
+            .pie[data-value="46"]:after {
+            display: none;
+            }
+            .pie[data-value="47"]:before {
+            transform: rotate(169.2deg);
+            }
+            .pie[data-value="47"]:after {
+            display: none;
+            }
+            .pie[data-value="48"]:before {
+            transform: rotate(172.8deg);
+            }
+            .pie[data-value="48"]:after {
+            display: none;
+            }
+            .pie[data-value="49"]:before {
+            transform: rotate(176.4deg);
+            }
+            .pie[data-value="49"]:after {
+            display: none;
+            }
+            .pie[data-value="50"]:before {
+            transform: rotate(180deg);
+            }
+            .pie[data-value="50"]:after {
+            display: none;
+            }
+            .pie[data-value="51"]:after {
+            transform: rotate(3.6deg);
+            }
+            .pie[data-value="51"]:before {
+            display: none;
+            }
+            .pie[data-value="52"]:after {
+            transform: rotate(7.2deg);
+            }
+            .pie[data-value="52"]:before {
+            display: none;
+            }
+            .pie[data-value="53"]:after {
+            transform: rotate(10.8deg);
+            }
+            .pie[data-value="53"]:before {
+            display: none;
+            }
+            .pie[data-value="54"]:after {
+            transform: rotate(14.4deg);
+            }
+            .pie[data-value="54"]:before {
+            display: none;
+            }
+            .pie[data-value="55"]:after {
+            transform: rotate(18deg);
+            }
+            .pie[data-value="55"]:before {
+            display: none;
+            }
+            .pie[data-value="56"]:after {
+            transform: rotate(21.6deg);
+            }
+            .pie[data-value="56"]:before {
+            display: none;
+            }
+            .pie[data-value="57"]:after {
+            transform: rotate(25.2deg);
+            }
+            .pie[data-value="57"]:before {
+            display: none;
+            }
+            .pie[data-value="58"]:after {
+            transform: rotate(28.8deg);
+            }
+            .pie[data-value="58"]:before {
+            display: none;
+            }
+            .pie[data-value="59"]:after {
+            transform: rotate(32.4deg);
+            }
+            .pie[data-value="59"]:before {
+            display: none;
+            }
+            .pie[data-value="60"]:after {
+            transform: rotate(36deg);
+            }
+            .pie[data-value="60"]:before {
+            display: none;
+            }
+            .pie[data-value="61"]:after {
+            transform: rotate(39.6deg);
+            }
+            .pie[data-value="61"]:before {
+            display: none;
+            }
+            .pie[data-value="62"]:after {
+            transform: rotate(43.2deg);
+            }
+            .pie[data-value="62"]:before {
+            display: none;
+            }
+            .pie[data-value="63"]:after {
+            transform: rotate(46.8deg);
+            }
+            .pie[data-value="63"]:before {
+            display: none;
+            }
+            .pie[data-value="64"]:after {
+            transform: rotate(50.4deg);
+            }
+            .pie[data-value="64"]:before {
+            display: none;
+            }
+            .pie[data-value="65"]:after {
+            transform: rotate(54deg);
+            }
+            .pie[data-value="65"]:before {
+            display: none;
+            }
+            .pie[data-value="66"]:after {
+            transform: rotate(57.6deg);
+            }
+            .pie[data-value="66"]:before {
+            display: none;
+            }
+            .pie[data-value="67"]:after {
+            transform: rotate(61.2deg);
+            }
+            .pie[data-value="67"]:before {
+            display: none;
+            }
+            .pie[data-value="68"]:after {
+            transform: rotate(64.8deg);
+            }
+            .pie[data-value="68"]:before {
+            display: none;
+            }
+            .pie[data-value="69"]:after {
+            transform: rotate(68.4deg);
+            }
+            .pie[data-value="69"]:before {
+            display: none;
+            }
+            .pie[data-value="70"]:after {
+            transform: rotate(72deg);
+            }
+            .pie[data-value="70"]:before {
+            display: none;
+            }
+            .pie[data-value="71"]:after {
+            transform: rotate(75.6deg);
+            }
+            .pie[data-value="71"]:before {
+            display: none;
+            }
+            .pie[data-value="72"]:after {
+            transform: rotate(79.2deg);
+            }
+            .pie[data-value="72"]:before {
+            display: none;
+            }
+            .pie[data-value="73"]:after {
+            transform: rotate(82.8deg);
+            }
+            .pie[data-value="73"]:before {
+            display: none;
+            }
+            .pie[data-value="74"]:after {
+            transform: rotate(86.4deg);
+            }
+            .pie[data-value="74"]:before {
+            display: none;
+            }
+            .pie[data-value="75"]:after {
+            transform: rotate(90deg);
+            }
+            .pie[data-value="75"]:before {
+            display: none;
+            }
+            .pie[data-value="76"]:after {
+            transform: rotate(93.6deg);
+            }
+            .pie[data-value="76"]:before {
+            display: none;
+            }
+            .pie[data-value="77"]:after {
+            transform: rotate(97.2deg);
+            }
+            .pie[data-value="77"]:before {
+            display: none;
+            }
+            .pie[data-value="78"]:after {
+            transform: rotate(100.8deg);
+            }
+            .pie[data-value="78"]:before {
+            display: none;
+            }
+            .pie[data-value="79"]:after {
+            transform: rotate(104.4deg);
+            }
+            .pie[data-value="79"]:before {
+            display: none;
+            }
+            .pie[data-value="80"]:after {
+            transform: rotate(108deg);
+            }
+            .pie[data-value="80"]:before {
+            display: none;
+            }
+            .pie[data-value="81"]:after {
+            transform: rotate(111.6deg);
+            }
+            .pie[data-value="81"]:before {
+            display: none;
+            }
+            .pie[data-value="82"]:after {
+            transform: rotate(115.2deg);
+            }
+            .pie[data-value="82"]:before {
+            display: none;
+            }
+            .pie[data-value="83"]:after {
+            transform: rotate(118.8deg);
+            }
+            .pie[data-value="83"]:before {
+            display: none;
+            }
+            .pie[data-value="84"]:after {
+            transform: rotate(122.4deg);
+            }
+            .pie[data-value="84"]:before {
+            display: none;
+            }
+            .pie[data-value="85"]:after {
+            transform: rotate(126deg);
+            }
+            .pie[data-value="85"]:before {
+            display: none;
+            }
+            .pie[data-value="86"]:after {
+            transform: rotate(129.6deg);
+            }
+            .pie[data-value="86"]:before {
+            display: none;
+            }
+            .pie[data-value="87"]:after {
+            transform: rotate(133.2deg);
+            }
+            .pie[data-value="87"]:before {
+            display: none;
+            }
+            .pie[data-value="88"]:after {
+            transform: rotate(136.8deg);
+            }
+            .pie[data-value="88"]:before {
+            display: none;
+            }
+            .pie[data-value="89"]:after {
+            transform: rotate(140.4deg);
+            }
+            .pie[data-value="89"]:before {
+            display: none;
+            }
+            .pie[data-value="90"]:after {
+            transform: rotate(144deg);
+            }
+            .pie[data-value="90"]:before {
+            display: none;
+            }
+            .pie[data-value="91"]:after {
+            transform: rotate(147.6deg);
+            }
+            .pie[data-value="91"]:before {
+            display: none;
+            }
+            .pie[data-value="92"]:after {
+            transform: rotate(151.2deg);
+            }
+            .pie[data-value="92"]:before {
+            display: none;
+            }
+            .pie[data-value="93"]:after {
+            transform: rotate(154.8deg);
+            }
+            .pie[data-value="93"]:before {
+            display: none;
+            }
+            .pie[data-value="94"]:after {
+            transform: rotate(158.4deg);
+            }
+            .pie[data-value="94"]:before {
+            display: none;
+            }
+            .pie[data-value="95"]:after {
+            transform: rotate(162deg);
+            }
+            .pie[data-value="95"]:before {
+            display: none;
+            }
+            .pie[data-value="96"]:after {
+            transform: rotate(165.6deg);
+            }
+            .pie[data-value="96"]:before {
+            display: none;
+            }
+            .pie[data-value="97"]:after {
+            transform: rotate(169.2deg);
+            }
+            .pie[data-value="97"]:before {
+            display: none;
+            }
+            .pie[data-value="98"]:after {
+            transform: rotate(172.8deg);
+            }
+            .pie[data-value="98"]:before {
+            display: none;
+            }
+            .pie[data-value="99"]:after {
+            transform: rotate(176.4deg);
+            }
+            .pie[data-value="99"]:before {
+            display: none;
+            }
+            .pie[data-value="100"]:after {
+            transform: rotate(180deg);
+            }
+            .pie[data-value="100"]:before {
+            display: none;
+            }
+            .progress {
+            position: absolute;
+            color: #bbb;
+            font-weight: 100;
+            line-height: 1;
+            }
+            .progress-wrapper {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            margin: 20px;
+            font-size: 40px;
+            }
+            .active22{
+            background-color:#111; // example
+            }
+            .EYhover:hover
+            {
+            background:#444;
+            }
+            .chart1 div {
+            font: 10px sans-serif;
+            background-color: #ffe600;
+            text-align: right;
+            padding: 3px;
+            margin: 1px;
+            color: white;
+            }
+            .chart2{
+            width: 100%;
+            min-height: 400px;
+            background:#111;
+            }
+            #donutchart,
+            #chart {
+            width: 500px;
+            height: 500px;
+            font-family: Arial;
+            }
+            #donutchart {
+            position: relative;
+            }
+            #labelOverlay {
+            width: 90px;
+            height: 45px;
+            position: absolute;
+            top: 233px;
+            left: 205px;
+            text-align: center;
+            cursor: default;
+            }
+            #labelOverlay p {
+            line-height: 0.3;
+            padding:0;
+            margin: 8px;
+            }
+            #labelOverlay p.used-size {
+            line-height: 0.5;
+            font-size: 20pt;
+            color: #8e8e8e;
+            }
+            #labelOverlay p.total-size {
+            line-height: 0.5;
+            font-size: 12pt;
+            color: #cdcdcd;
+            }
+            .count {
+            font-family: Consolas, Menlo, Monaco, monospace;
+            font-family: 'ralewayregular';
+            font-weight: bold;
+            font-size: 5vh;
+            color:white;
+            }
+            .countdark {
+            font-family: Consolas, Menlo, Monaco, monospace;
+            font-family: 'ralewayregular';
+            font-weight: bold;
+            font-size: 5vh;
+            color:#111;
+            }
+            .buttonhover{
+            color: ffe600;
+            }
+            .dock_noleftpadding{
+            padding-top: 10px !important; 
+            padding-right: 10px !important; 
+            padding-bottom: 10px !important;  
+            }
+			.dock_notoppadding{
+            padding-left: 10px !important; 
+            padding-right: 10px !important; 
+            padding-bottom: 10px !important;  
+            }
+            .buttonhover:hover{
+            background:#333;
+            color:#ffe600;}
+         </style>
+         <link rel='stylesheet' id='EYBI_bootstrap.min.css-css'  href='../wp-content/themes/EYBI/css/bootstrap.min5010.css?ver=4.9.8' type='text/css' media='all' />
+         <link rel='stylesheet' id='EYBI_overwrite-css'  href='../wp-content/themes/EYBI/css/overwrite5010.css?ver=4.9.8' type='text/css' media='all' />
+         <link rel='stylesheet' id='EYBI_fonts_raleway-css'  href='../wp-content/themes/EYBI/fonts/raleway/stylesheet5010.css?ver=4.9.8' type='text/css' media='all' />
+         <link rel='stylesheet' id='EYBI_font_awesome-css'  href='../wp-content/themes/EYBI/fonts/FontAwesome/font-awesome5010.css?ver=4.9.8' type='text/css' media='all' />
+         <link rel='stylesheet' id='EYBI_owl_carousal-css'  href='../wp-content/themes/EYBI/css/owl/owl.carousel5010.css?ver=4.9.8' type='text/css' media='all' />
+         <link rel='stylesheet' id='EYBI_owl_theme-css'  href='../wp-content/themes/EYBI/css/owl/owl.theme5010.css?ver=4.9.8' type='text/css' media='all' />
+         <link rel='stylesheet' id='EYBI_owl_transitions-css'  href='../wp-content/themes/EYBI/css/owl/owl.transitions5010.css?ver=4.9.8' type='text/css' media='all' />
+         <link rel='stylesheet' id='EYBI_animate-css'  href='../wp-content/themes/EYBI/css/animate5010.css?ver=4.9.8' type='text/css' media='all' />
+         <link rel='stylesheet' id='EYBI_masonry-css'  href='../wp-content/themes/EYBI/css/masonry5010.css?ver=4.9.8' type='text/css' media='all' />
+         <link rel='stylesheet' id='EYBI_jssor_slider-css'  href='../wp-content/themes/EYBI/css/jssor-slider5010.css?ver=4.9.8' type='text/css' media='all' />
+         <link rel='stylesheet' id='EYBI_simplelightbox-css'  href='../wp-content/themes/EYBI/css/simplelightbox5010.css?ver=4.9.8' type='text/css' media='all' />
+         <link rel='stylesheet' id='EYBI_style-css'  href='../wp-content/themes/EYBI/css/style5010.css?ver=4.9.8' type='text/css' media='all' />
+         <link rel='stylesheet' id='EYBI_skins-css'  href='../wp-content/themes/EYBI/skins/default5010.css?ver=4.9.8' type='text/css' media='all' />
+         <link rel='stylesheet' id='EYBI_theme-css'  href='../wp-content/themes/EYBI/css/theme5010.css?ver=4.9.8' type='text/css' media='all' />
+         <link rel='stylesheet' id='EYBI_main_css-css'  href='../wp-content/themes/EYBI/style5010.css?ver=4.9.8' type='text/css' media='all' />
+         <link rel='stylesheet' id='js_composer_front-css'  href='../wp-content/plugins/js_composer/assets/css/js_composer.min8b06.css?ver=5.4.7' type='text/css' media='all' />
+         <script type='text/javascript' src='../wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+         <link rel="icon" href="../wp-content/uploads/2018/04/EYBIicon.png" sizes="32x32" />
+         <link rel="icon" href="../wp-content/uploads/2018/04/EYBIicon.png" sizes="192x192" />
+         <script src='../wp-content/themes/EYBI/js/nprogress.js'></script>
+         <script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+         <meta name="generator" content="WordPress 4.9.8" />
+         <link rel="canonical" href="index.html" />
+         <script src="../inputdata/d3.v4.min.js"></script>
+         <meta name="msapplication-TileImage" content="" />
+         <noscript>
+            <style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style>
+         </noscript>
+      </head>
+      <body onLoad="myFunction()" class="page-template-default page page-id-107 wpb-js-composer js-comp-ver-5.4.7 vc_responsive">
+         <!-- Page Loader
+            ========================================================= -->
+         <!-- Start Loading -->
+         <div id="loading" class="wrap-loading">
+            <div class="loader">
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+         <!-- End Loading -->
+         <!-- /End of Page loader
+            ========================================================= -->
+         <!-- Start Layout -->
+         <div id="wrapper" class="wrapper">
+            <!-- Start Wrap Sidebar -->
+            <div class="wrap-sidebar ">
+               <!-- Start Logo -->
+               <div class="logo">
+                  <a href="http://localhost:8000/1eybi.html">
+                     <img src="../wp-content/uploads/2018/04/EYBI.png" alt="" style="transform: scale(1.3); width: 134px; height:auto; max-width:100%;" />
+                     <!--<span style="color:white;"> Business </br> Intelligence</span>-->
+                  </a>
+               </div>
+               <nav class="wrap-menu">
+                  <ul id="menu-menu-1" class="menu">
+                     <li id="EYhover menu-item-213" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-213 active22"><a href="http://localhost:8000/1eybi.html">Document Types</a></li>
+                  </ul>
+               </nav>
+               <!-- Start Fixed Widget -->
+               <!-- End Fixed Widget -->
+               <div class="clearsidebar"></div>
+            </div>
+            <!-- End Wrap Sidebar -->
+            <!-- Start Wrap Content -->
+            <div class="wrap-content">
+               <!-- Start Mobile Nav -->
+               <div class="mobile-nav">
+                  <a href="javascript:void(0)" class="nav" id="toggle-nav"><i class="fa fa-bars"></i></a>
+                  <a href="http://localhost:8000/1eybi.html" class="logo">
+                  <img src="../wp-content/uploads/2018/04/EYBI.png" alt="" style="width: 134px; height:auto; max-width:100%;" />
+                  </a>
+               </div>
+               <!-- End Mobile Nav -->
+               <!-- Start Content -->
+               <div class="content">
+                  <!-- Start Post -->
+                  <div class=""  style="">
+                     <div class="wpb_column " style="" >
+                        <!-- Start filter -->
+                        <div id="includedContent"></div>
+                        <div class="wrap-filter right">
+                           <ul class="filters">
+                              <li data-filter="New"><a href="javascript:void(0)" style=" background: rgb(255, 230, 0); color: #111" >New</a></li>
+                              <li data-filter="ISDA">
+                                 <a href="javascript:void(0)">
+                                 ISDA                </a>
+                              </li>
+                              <li data-filter="Mortgage">
+                                 <a href="javascript:void(0)">
+                                 Mortgage                </a>
+                              </li>
+                              <li data-filter="Syndicated Loans">
+                                 <a href="javascript:void(0)">
+                                 Syndicated Loans                </a>
+                              </li>
+                              <li class="active " data-filter="">
+                                 <a href="javascript:void(0)">
+                                 Home                </a>
+                              </li>
+                           </ul>
+                        </div>
+                        <!-- End filter -->
+                        <!-- Start Masonry -->
+                        <div class="row no-gap">
+                           <div id="masonry" class="masonry infinite-scroll col-3">
+                              <div class="grid-sizer col-md-4 col-sm-6 col-xs-12"></div>
+							  
+                              <a href="syndicated_loan.html">
+                                 <div data-filter="Syndicated Loans" style="padding: 10px; min-height: 270px; " class="grid-item col-md-4 col-sm-6 col-xs-12 ">
+                              <a href="#"><div class="buttonhover" style="background:#222; float:left; min-height:50px; width:100%;" >
+                              <div class="count" style="padding-top:10px; text-align: center; padding-left:20px; padding-right:20px; "><span id="div1" style="color: #ffe600; font-size:0.7em; color:#ffe600;">Syndicated Loans</span></div></div></a>
+                              <div class="buttonhover" style="text-align: left; line-height: 15px; background:#222; vertical-align: middle; padding: 5px; padding-left: 10px; float:left; min-height:85px; width:50%;" >
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Created By:</span></br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; ">Siddharth Narayanan</span>
+                              </br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Last updated:</span></br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; ">13<sup>th</sup> Dec 2018</span>
+                              </div>
+                              <div class="buttonhover" style="text-align: left; line-height: 15px; background:#222; vertical-align: middle; padding: 5px; padding-left: 10px; float:left; min-height:85px; width:50%;" >
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Progress:</span></br>
+                              <span id="div1" style="color: #cbf442; line-height: 2px; font-size:0.7em; ">49%</span>
+                              </br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Documents completed:</span></br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; ">134</span>	
+                              </div>
+                              <div class="buttonhover" style="float:left; background:#94cad6; line-height:10px; min-height:135px; width:50%; " >
+                              <div class="count" style="padding-top:7px;  text-align: center; padding-left:20px; padding-right:20px; "><span style="color: rgba(0,0,0,0.7); font-size: 2vh; text-align: center; " id="syndicated">Documents </br>Count</span>
+                              </br></br></br></br><span style="color: rgba(0,0,0,0.7); font-size: 5vh;" id="syndicated">161</span> </div>
+                              </div>
+                              <div class="buttonhover" style="float:left; background:#fff; line-height:10px; min-height:135px; width:50%;" >
+                              <div class="count" style="padding-top:7px;  text-align: center; padding-left:20px; padding-right:20px; ">
+                              <span style="color: rgba(0,0,0,0.8); font-size: 2vh; text-align: center; " id="syndicated">Progress</span>
+                              <div class="met2" style="float:left; padding:0px;  padding-left:20px; line-height: 1px;">
+                              <div ng-app="myApp1" class="met-chart"  style="line-height: 1px;">
+                              <div class="pie" id="bla" data-value="67" style="    transform: scale(0.6);line-height: 1px;">
+                              <div id="field_extraction_percentage" class="pie-val"></div>
+                              </div>
+                              </div>	
+                              </div>	
+                              </br>
+                              <div style="line-height: 1px; padding-left: 15px; float:left;">	
+                              <span id="div1" style="color: rgba(0,0,0,0.8); line-height: 1px; font-size:0.4em; ">64%</span>
+                              <span id="div1" style="color: rgba(0,0,0,0.8); line-height: 1px; font-size:0.4em; ">Completed</span></div>
+                              </div>
+                              </div>
+                              </div>
+							  </a>
+							  
+							  <a href="syndicated_loan.html">
+                                 <div data-filter="Syndicated Loans" style="min-height: 270px; " class="dock_noleftpadding grid-item col-md-4 col-sm-6 col-xs-12 ">
+                              <a href="#"><div class="buttonhover" style="background:#222; float:left; min-height:50px; width:100%;" >
+                              <div class="count" style="padding-top:10px; text-align: center; padding-left:20px; padding-right:20px; "><span id="div1" style="color: #ffe600; font-size:0.7em; color:#ffe600;">Mortgage</span></div></div></a>
+                              <div class="buttonhover" style="text-align: left; line-height: 15px; background:#222; vertical-align: middle; padding: 5px; padding-left: 10px; float:left; min-height:85px; width:50%;" >
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Created By:</span></br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; ">Amanda Milberg</span>
+                              </br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Last updated:</span></br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; ">13<sup>th</sup> Dec 2018</span>
+                              </div>
+                              <div class="buttonhover" style="text-align: left; line-height: 15px; background:#222; vertical-align: middle; padding: 5px; padding-left: 10px; float:left; min-height:85px; width:50%;" >
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Progress:</span></br>
+                              <span id="div1" style="color: #cbf442; line-height: 2px; font-size:0.7em; ">49%</span>
+                              </br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Documents completed:</span></br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; ">134</span>	
+                              </div>
+                              <div class="buttonhover" style="float:left; background:#94cad6; line-height:10px; min-height:135px; width:50%; " >
+                              <div class="count" style="padding-top:7px;  text-align: center; padding-left:20px; padding-right:20px; "><span style="color: rgba(0,0,0,0.7); font-size: 2vh; text-align: center; " id="syndicated">Documents </br>Count</span>
+                              </br></br></br></br><span style="color: rgba(0,0,0,0.7); font-size: 5vh;" id="syndicated">161</span> </div>
+                              </div>
+                              <div class="buttonhover" style="float:left; background:#fff; line-height:10px; min-height:135px; width:50%;" >
+                              <div class="count" style="padding-top:7px;  text-align: center; padding-left:20px; padding-right:20px; ">
+                              <span style="color: rgba(0,0,0,0.8); font-size: 2vh; text-align: center; " id="syndicated">Progress</span>
+                              <div class="met2" style="float:left; padding:0px;  padding-left:20px; line-height: 1px;">
+                              <div ng-app="myApp1" class="met-chart"  style="line-height: 1px;">
+                              <div class="pie" id="bla" data-value="67" style="    transform: scale(0.6);line-height: 1px;">
+                              <div id="field_extraction_percentage" class="pie-val"></div>
+                              </div>
+                              </div>	
+                              </div>	
+                              </br>
+                              <div style="line-height: 1px; padding-left: 15px; float:left;">	
+                              <span id="div1" style="color: rgba(0,0,0,0.8); line-height: 1px; font-size:0.4em; ">64%</span>
+                              <span id="div1" style="color: rgba(0,0,0,0.8); line-height: 1px; font-size:0.4em; ">Completed</span></div>
+                              </div>
+                              </div>
+                              </div>
+							  </a>
+							  
+							  <a href="syndicated_loan.html">
+                                 <div data-filter="Syndicated Loans" style="min-height: 270px; " class="dock_noleftpadding grid-item col-md-4 col-sm-6 col-xs-12 ">
+                              <a href="#"><div class="buttonhover" style="background:#222; float:left; min-height:50px; width:100%;" >
+                              <div class="count" style="padding-top:10px; text-align: center; padding-left:20px; padding-right:20px; "><span id="div1" style="color: #ffe600; font-size:0.7em; color:#ffe600;">ISDA</span></div></div></a>
+                              <div class="buttonhover" style="text-align: left; line-height: 15px; background:#222; vertical-align: middle; padding: 5px; padding-left: 10px; float:left; min-height:85px; width:50%;" >
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Created By:</span></br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; ">Jacob Berk</span>
+                              </br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Last updated:</span></br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; ">13<sup>th</sup> Dec 2018</span>
+                              </div>
+                              <div class="buttonhover" style="text-align: left; line-height: 15px; background:#222; vertical-align: middle; padding: 5px; padding-left: 10px; float:left; min-height:85px; width:50%;" >
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Progress:</span></br>
+                              <span id="div1" style="color: #cbf442; line-height: 2px; font-size:0.7em; ">49%</span>
+                              </br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; color:#fff;">Documents completed:</span></br>
+                              <span id="div1" style="color: #ffe600; line-height: 2px; font-size:0.7em; ">134</span>	
+                              </div>
+                              <div class="buttonhover" style="float:left; background:#94cad6; line-height:10px; min-height:135px; width:50%; " >
+                              <div class="count" style="padding-top:7px;  text-align: center; padding-left:20px; padding-right:20px; "><span style="color: rgba(0,0,0,0.7); font-size: 2vh; text-align: center; " id="syndicated">Documents </br>Count</span>
+                              </br></br></br></br><span style="color: rgba(0,0,0,0.7); font-size: 5vh;" id="syndicated">161</span> </div>
+                              </div>
+                              <div class="buttonhover" style="float:left; background:#fff; line-height:10px; min-height:135px; width:50%;" >
+                              <div class="count" style="padding-top:7px;  text-align: center; padding-left:20px; padding-right:20px; ">
+                              <span style="color: rgba(0,0,0,0.8); font-size: 2vh; text-align: center; " id="syndicated">Progress</span>
+                              <div class="met2" style="float:left; padding:0px;  padding-left:20px; line-height: 1px;">
+                              <div ng-app="myApp1" class="met-chart"  style="line-height: 1px;">
+                              <div class="pie" id="bla" data-value="67" style="    transform: scale(0.6);line-height: 1px;">
+                              <div id="field_extraction_percentage" class="pie-val"></div>
+                              </div>
+                              </div>	
+                              </div>	
+                              </br>
+                              <div style="line-height: 1px; padding-left: 15px; float:left; text-align: center;">	
+                              <span id="div1" style="color: rgba(0,0,0,0.8); line-height: 1px; font-size:0.4em; ">64%</span>
+                              <span id="div1" style="color: rgba(0,0,0,0.8); line-height: 1px; font-size:0.4em; ">Completed</span></div>
+                              </div>
+                              </div>
+                              </div>
+							  </a>
+							  
+							  
+							  
+                              <a href="1eybi.html">
+                                 <div  style=" width: 100%; background: #111;  min-height: 270px; vertical-align: middle; " class="dock_notoppadding grid-item col-md-4 col-sm-6 col-xs-12 buttonhover">
+                                   
+								   
+									<a href="#"><div class="buttonhover" style="background:#222; float:left; min-height:50px; width:100%;" >
+                              <div class="count" style="padding-top:10px; min-height: 270px; background: #ffe600; padding-top:80px; text-align: center; padding-left:20px; padding-right:20px; color:#000;"><span style="font-size: 10vh; color:#000;" id="total">213</span> </br></br> Total Documents</div></div></a>
+                                 </div>
+                              </a>
+                              <script>
+                                 d3.csv("BI_12032018.csv", function(data){
+                                     console.log(data);
+                                 	
+                                 	var variables = data.columns;
+                                   variables.forEach(function(d) {
+                                     console.log("typeof " + d + ": " + data[0][d])
+                                 	
+                                 	
+                                   });
+                                   
+                                   
+                                   var value = data.filter(function(d) { return d === "Iowa" })[0].value;
+                                   
+                                   
+                                 });
+                              </script>
+                              <script>
+                                 d3.csv("BI_12032018.csv", function(data){
+                                     console.log(data);
+                                 	
+                                 	var variables = data.columns;
+                                 	var SYNDICATED_flag=0;
+                                 	var MORTGAGE_flag=0;
+                                 	var ISDA_flag=0;
+                                 	var TOTAL_flag=0;
+                                   data.map(function(d) {
+                                     if (!d['Full File Name'].includes('Unextracted')) {
+                                 		TOTAL_flag++;
+                                 		if (d['Full File Name'].includes('CREDIT') || d['Full File Name'].includes('Credit') || d['Full File Name'].includes('credit')
+                                 		|| d['Full File Name'].includes('agreement') || d['Full File Name'].includes('Agreement') || d['Full File Name'].includes('AGREEMENT')
+                                 		|| d['Full File Name'].includes('resta') || d['Full File Name'].includes('Resta') || d['Full File Name'].includes('RESTA')) {
+                                 			SYNDICATED_flag++;
+                                 		}
+                                 		
+                                 		if (d['Full File Name'].includes('confirm') || d['Full File Name'].includes('Confirm') || d['Full File Name'].includes('CONFIRM')
+                                 		|| d['Full File Name'].includes('MASTER') || d['Full File Name'].includes('Master') || d['Full File Name'].includes('master')) {
+                                 			ISDA_flag++;
+                                 		}
+                                 		
+                                 		if (d['Full File Name'].includes('CLOSING') || d['Full File Name'].includes('closing') || d['Full File Name'].includes('Closing')) {
+                                 			MORTGAGE_flag++;
+                                 		}
+                                 	}
+                                 	
+                                 	
+                                 	document.getElementById("isda").textContent=ISDA_flag ;
+                                 	document.getElementById("syndicated").textContent=SYNDICATED_flag ;
+                                 	document.getElementById("mortgage").textContent=MORTGAGE_flag ;
+                                 	document.getElementById("total").textContent=TOTAL_flag ;
+                                 	
+                                   });
+                                   
+                                   
+                                   var documents_flag=0;
+                                   var variables = data.columns;
+                                   variables.forEach(function(d) {
+                                   if (d == 'Extraction status') {
+                                 		for (var i=0; i < 300; i += 1){
+                                 
+                                 				try{
+                                 				
+                                 				if(typeof(data[i])!="undefined"){
+                                 					documents_flag++;
+                                 					}
+                                 				}
+                                 			catch(e){
+                                 					console.log('An error has occurred: '+e.message);
+                                 				}	
+                                 
+                                 		}}
+                                 
+                                   });
+                                   
+                                   let legal_role_set = new Set();
+                                   let borrower_role_set = new Set();
+                                   let holdings_role_set = new Set();
+                                   var admin_role_list = [];
+                                   var holdings_role_list = [];
+                                   var borrower_role_list = [];
+                                   var legal_role_list = [];
+                                   var ContractualMaturityDatePre2021 = [];
+                                   var ContractualMaturityDatePost2021 = [];
+                                   var variables = data.columns;
+                                   variables.forEach(function(d) {
+                                     if (d == "LegalEntitysRoles") {
+                                 		for (var i=0; i < documents_flag; i += 1){
+                                 
+                                 			if(!data[i][d].includes('Unextracted')){
+                                 				legal_role_set.add(data[i][d]);
+                                 				legal_role_list.push(data[i][d]);
+                                 			}
+                                 			
+                                 		}
+                                 	}
+                                 	document.getElementById("Lead Arranger").textContent="Lead Arranger" ;
+                                 	document.getElementById("Lead Arranger Count").textContent=legal_role_list.length ;
+                                 	});
+                                   
+                                   holdings_role_set.forEach((el) => {
+                                   console.log(el);
+                                 });
+                                   
+                                   
+                                   
+                                 });
+                              </script>
+                           </div>
+                        </div>
+                        <!-- End Masonry -->
+                        <!--<a id="next-page" href="load/json/3col/grid2.html">
+                           <i class="fa fa-arrow-down"></i> Load more
+                           </a>-->
+                     </div>
+                     <div class="clearfix"></div>
+                  </div>
+                  <!-- End Post -->
+                  <!-- End Form Comment -->
+               </div>
+               <!-- Start Link Footer -->
+               <!--<footer class="footer">
+                  <ul class="link-footer">
+                                                  <li>
+                                  <a href="# "> 
+                                      About Us 
+                                  </a>
+                              </li>
+                                                  <li>
+                                  <a href="# "> 
+                                      Help Center 
+                                  </a>
+                              </li>
+                                                  <li>
+                                  <a href="# "> 
+                                      Privacy Policy 
+                                  </a>
+                              </li>
+                                                  <li>
+                                  <a href="# "> 
+                                      Term Conditions 
+                                  </a>
+                              </li>
+                                          
+                  </ul>
+                  <div class="copyright">
+                      2018 © Copyright <a href="https://.net/user/"></a>. All rights Reserved.
+                                  </div>
+                  
+                  </footer>-->
+               <!-- End Link Footer -->
+            </div>
+         </div>
+         <script type='text/javascript'>
+            /* <![CDATA[ */
+            var ajax_var = {"url":"http:\/\/www..com\/demo\/wp\/EYBI\/wp-admin\/admin-ajax.php","nonce":"6700a255d5"};
+            /* ]]> */
+         </script>
+         <script type='text/javascript'>
+            $('li a').click(function()
+            {
+              $('li').removeClass('active22');
+              $(this).parent().addClass('active22');
+            });
+         </script>
+         <script type='text/javascript'>
+            var data = [4, 8, 15, 16, 23, 42];
+            
+            var x = d3.scale.linear()
+                .domain([0, d3.max(data)])
+                .range([0, 420]);
+            
+            d3.select(".chart1")
+              .selectAll("div")
+                .data(data)
+              .enter().append("div")
+                .style("width", function(d) { return x(d) + "px"; })
+                .text(function(d) { return d; });
+            
+         </script>
+         <script type='text/javascript'>
+            var chart = c3.generate({
+              bindto: d3.select('.chart2'),
+              data: {
+                columns: [
+                  ['data1', 30, 200, 100, 400, 150, 250],
+                  ['data2', 50, 20, 10, 40, 15, 25]
+                ]
+              }
+            });
+         </script>
+         <script type='text/javascript'> 
+            NProgress.start(); // start    
+            NProgress.set(0.4); // To set a progress percentage, call .set(n), where n is a number between 0..1
+            NProgress.inc(); // To increment the progress bar, just use .inc(). This increments it with a random amount. This will never get to 100%: use it for every image load (or similar).If you want to increment by a specific value, you can pass that as a parameter
+            NProgress.configure({ ease: 'ease', speed: 500 }); // Adjust animation settings using easing (a CSS easing string) and speed (in ms). (default: ease and 200)
+            NProgress.configure({trickleSpeed: 800 }); //Adjust how often to trickle/increment, in ms.
+            NProgress.configure({ showSpinner: false });//Turn off loading spinner by setting it to false. (default: true)
+            NProgress.configure({ parent: '#container' });//specify this to change the parent container. (default: body)
+            NProgress.done(); // end
+                
+         </script>
+         <script type='text/javascript'>
+            // Using Google Charts
+            // Label is overlayed HTML.
+            // All parts are configurable.
+            
+            
+            google.load("visualization", "1", {packages:["corechart"]});
+            
+            google.setOnLoadCallback(drawChart);
+            
+            function drawChart() {
+            	var data = google.visualization.arrayToDataTable([
+            		['Content', 'Size'],
+            		['Photos',     22],
+            		['Videos',      9],
+            		['Free Space',  9]
+            	]);
+            
+            	var options = {
+            		title: "",
+            		pieHole: 0.35,
+            		backgroundColor: '#111',
+            		pieSliceBorderColor: "none",
+                 colors: ['#067ab5', '#3aa5dd', '#eaeaea' ],
+            		legend: {
+            			position: "none"	
+            		},
+            		pieSliceText: "none",
+            		tooltip: {
+            			trigger: "none"
+            		}
+            	};
+            
+            	var chart = new google.visualization
+            			.PieChart(document.getElementById('chart'));
+                    
+            	chart.draw(data, options);
+              
+            }
+         </script>
+         <script type='text/javascript'>
+            $('.count').each(function () {
+                $(this).prop('Counter',0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 8000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+         </script>
+         <script type='text/javascript' src='../wp-content/themes/EYBI/js/post-like.min5152.js?ver=1.0'></script>
+         <script type='text/javascript' src='../wp-content/themes/EYBI/js/bootstrap.min5010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-content/themes/EYBI/js/ie10-viewport-bug-workaround5010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-content/themes/EYBI/js/jquery.easing-1.3.min5010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-content/themes/EYBI/js/masonry/masonry-3.1.45010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-content/themes/EYBI/js/masonry/masonry.filter5010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-content/themes/EYBI/js/infinitecroll/jquery.infinitescroll5010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-content/themes/EYBI/js/nicescroll/jquery.nicescroll.min5010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-content/themes/EYBI/js/hcsticky/jquery.hc-sticky.min5010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-content/themes/EYBI/js/ticker/ticker5010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-content/themes/EYBI/js/owl/owl.carousel.min5010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-content/themes/EYBI/js/validation/jquery.validate.min5010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-content/themes/EYBI/js/jssor-slider/jssor.slider.min5010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-content/themes/EYBI/js/lightbox/simple-lightbox5010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-content/themes/EYBI/js/prettymaps/prettymaps5010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-content/themes/EYBI/js/EYBI.script5010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-includes/js/comment-reply.min5010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-includes/js/wp-embed.min5010.js?ver=4.9.8'></script>
+         <script type='text/javascript' src='../wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min8b06.js?ver=5.4.7'></script>
+      </body>
+   </html>
